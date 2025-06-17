@@ -10,8 +10,8 @@ function Card(props) {
                 className="card-img"
             />
             <div className="card-text">
-                <p># 1{props.position}</p>
-                <h3>Elizabetch e os dois papagaios{props.artistName}</h3></div>
+                <p>#{props.position}</p>
+                <h3>{props.artistName}</h3></div>
         </div>
     )
 }
