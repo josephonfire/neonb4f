@@ -7,6 +7,8 @@ import MusicCard from '../app/components/MusicCard.jsx'// Ensure this path point
 import PodcastCard from '../app/components/podcastCard.jsx'; // Ensure this path points to the correct location of the PodcastCard component
 import NavBar from '../app/components/NavBar.jsx'; // Ensure this path points to the correct location of the NavBar component
 import UserInfoBar from '../app/components/UserInfoBar.jsx';
+import UserInfoBar2 from '../app/components/UserInfoBar2.jsx';
+import UserInfoBar3 from '../app/components/UserInfoBar2.jsx';
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
       <div><MusicCard /></div>
       <div><PodcastCard /></div>
       <div><UserInfoBar /></div>
+      <div><UserInfoBar2 /></div>
+      <div><UserInfoBar3 /></div>
+      <div></div>
     </>
   )
 };
