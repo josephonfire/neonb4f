@@ -20,7 +20,7 @@ function Navbar() {
                 <nav className={`${styles.navbar}`}>
                     {/* logo */}
                     <a href='#home' className={`${styles.logo}`}>
-                        <img src="/imgs/spoti-logo.svg" alt="Home-Logo" className={`${styles.icon}`} /></a>
+                        <img src="/imgs/spoti-logo.svg" alt="Home-Logo" style={{ width: '50px', height: '50px' }} /></a>
 
                     <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
                         <li onClick={removeActive}>
