@@ -11,7 +11,7 @@ function podcastCard(props) {
             />
             <div className="card-text">
                 <p># 1{props.position}</p>
-                <h3>Os dois papagaios da Elizabetch e outras histórias - ep.2{props.artistName}</h3></div>
+                <h3>Os dois papagaios da Elizabetch e outras histórias - ep.2{props.podcastName}</h3></div>
         </div>
     )
 }

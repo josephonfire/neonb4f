@@ -5,10 +5,12 @@ import Card from '../app/components/Card.jsx';
 import AlbumCard from '../app/components/AlbumCard.jsx';
 import MusicCard from '../app/components/MusicCard.jsx'// Ensure this path points to the correct location of the Card component
 import PodcastCard from '../app/components/podcastCard.jsx'; // Ensure this path points to the correct location of the PodcastCard component
+import NavBar from '../app/components/NavBar.jsx'; // Ensure this path points to the correct location of the NavBar component
 
 function App() {
   return (
     <>
+    <div><NavBar/></div>
       <div><Card /></div>
       <div><AlbumCard /></div>
       <div><MusicCard /></div>

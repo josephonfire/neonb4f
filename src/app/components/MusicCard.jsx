@@ -11,7 +11,7 @@ function MusicCard(props) {
             />
             <div className="card-text">
                 <p># 1{props.position}</p>
-                <h3>Parem de me gastar o nome{props.artistName}</h3></div>
+                <h3>Parem de me gastar o nome{props.trackName}</h3></div>
         </div>
     )
 }

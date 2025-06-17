@@ -11,7 +11,7 @@ function AlbumCard(props) {
             />
             <div className="card-text">
                 <p># 1{props.position}</p>
-                <h3>Primeiro Album Elizabetch e os dois papagaios{props.artistName}</h3></div>
+                <h3>Primeiro Album Elizabetch e os dois papagaios{props.albumName}</h3></div>
         </div>
     )
 }
