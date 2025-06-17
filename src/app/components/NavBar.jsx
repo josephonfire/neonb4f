@@ -20,22 +20,25 @@ function Navbar() {
                 <nav className={`${styles.navbar}`}>
                     {/* logo */}
                     <a href='#home' className={`${styles.logo}`}>
-                        <img src=".src/app/imgs/spoti-logo.svg" alt="logo" className={`${styles.icon}`}/>Home</a>
+                        <img src="/imgs/spoti-logo.svg" alt="Home-Logo" className={`${styles.icon}`} /></a>
+
                     <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
                         <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`}>Artist</a>
+                            <a href='#home' className={`${styles.navLink}`}><img src="/imgs/spoti-singer-icon.svg" alt="Home-Logo" className={`${styles.icon}`} /></a>
                         </li>
                         <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`}>Songs</a>
+                            <a href='#home' className={`${styles.navLink}`}>
+                                <img src="/imgs/spoti-musics-icon.svg" alt="Home-Logo" className={`${styles.icon}`} /></a>
                         </li>
                         <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`}>Albuns</a>
+                            <a href='#home' className={`${styles.navLink}`}>
+                                <img src="/imgs/spoti-albums-icon.svg" alt="Home-Logo" className={`${styles.icon}`} /></a>
                         </li>
                         <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`}>Podcasts</a>
+                            <a href='#home' className={`${styles.navLink}`}>
+                                <img src="/imgs/spoti-podcasts-icon.svg" alt="Home-Logo" className={`${styles.icon}`} /></a>
                         </li>
                     </ul>
-
                 </nav>
             </header>
         </div >
