@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from './components/NavBar';
-import Card from './components/Card';
+import AlbumCard from './components/AlbumCard';
 
 function App() {
   return (
     <>
-      <div><Card /></div>
+      <div><AlbumCard /></div>
     </>
   );
 }
