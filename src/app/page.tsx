@@ -1,15 +1,15 @@
 import React from 'react';
-import Navbar from './components/NavBar';
+// Ensure the correct path to AlbumCard component
+import './globals.css'; // Import global styles';
+import Card from '../app/components/Card.jsx';
+import AlbumCard from '../app/components/AlbumCard.jsx';// Ensure this path points to the correct location of the Card component
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <main>
-        <h1>aaaaaaaahhhhhhhhhhhhhhhhhhhhhh</h1>
-        <p>This is a preview of the NavBar component.</p>
-      </main>
-    </div>
+    <>
+      <div><Card /></div>
+      <div><AlbumCard /></div>
+    </>
   );
 }
 

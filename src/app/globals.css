@@ -19,30 +19,37 @@
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }
 }
+
 @keyframes neonSlideDown {
   0% {
     transform: translateY(-100%);
   }
+
   100% {
     transform: translateY(100%);
   }
 }
+
 @keyframes neonSlideLeft {
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
 }
+
 @keyframes neonSlideUp {
   0% {
     transform: translateY(100%);
   }
+
   100% {
     transform: translateY(-100%);
   }
@@ -76,27 +83,6 @@ body {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  
-}
 
-
-.Card1 {
-  background-color: rgb(255, 255, 255, 0.3);
-  padding-left: 40px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border: solid #ffffff 1px;
-  border-radius: 15px;
-}
-
-.Card2 {
-  border: solid #521f90 2px;
-  border-radius: 15px;
-}
-@layer components {
-  /* .btn-primary {
-      @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
-  } */
 }
 
