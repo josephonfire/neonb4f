@@ -1,4 +1,4 @@
-import { NeonButton } from "../components/neon-button";
+import { NeonButton } from "./Neon-Button";
 
 export function Login() {
   return (
