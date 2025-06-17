@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import history from "../data/history.json"
 
 export default function Page() {
   const [active, setActive] = useState(0);
@@ -11,6 +12,7 @@ export default function Page() {
     { label: "Season" },
   ];
 
+  
   return (
     <>
       <div className="bg-purple-950 min-h-screen px-4">
@@ -26,10 +28,11 @@ export default function Page() {
         <div className="boxes flex justify-center mt-3.5 font-black text-3xl">Usuário</div>
         <div className="grid grid-cols-1 gap-4 justify-items-center mt-4">
           <div className="w-full max-w-md bg-purple-600 rounded-2xl p-3 text-white text-lg border border-white">
-            Reproduções:{" "}
+            Reproduções: {history.length}
           </div>
           <div className="w-full max-w-md bg-purple-600 rounded-2xl p-3 text-white text-lg border border-white">
-            Faixas Ouvidas:{" "}
+            Faixas Ouvidas: {history.filter(item => item.reason_end == "endplay").length
+          }
           </div>
           <div className="w-full max-w-md bg-purple-600 rounded-2xl p-3 text-white text-lg border border-white">
             Tempo de Reprodução:{" "}
