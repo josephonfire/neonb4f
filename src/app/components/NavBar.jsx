@@ -5,7 +5,7 @@ import styles from '../navbar.css';
 
 function Navbar() {
     // adding the states 
-    const [isActive, setIsActive] = react.useState(false);
+    const [isActive, setIsActive] = useState(false);
     //add the active class
     const toggleActiveClass = () => {
         setIsActive(!isActive);
@@ -48,4 +48,3 @@ function Navbar() {
     );
 }
 export default Navbar;
-;
