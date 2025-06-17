@@ -8,6 +8,45 @@
   max-width: 600px;
 }
 
+:root {
+  --animate-neon-slide-right: neonSlideRight 2s linear infinite;
+  --animate-neon-slide-down: neonSlideDown 2s linear infinite;
+  --animate-neon-slide-left: neonSlideLeft 2s linear infinite;
+  --animate-neon-slide-up: neonSlideUp 2s linear infinite;
+}
+
+@keyframes neonSlideRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes neonSlideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes neonSlideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes neonSlideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 
 .gabarito {
   font-family: "Gabarito", sans-serif;
@@ -16,10 +55,10 @@
   font-style: normal;
 }
 
-@theme inline { 
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var("Gabarito");
+  --font-sans: "Gabarito", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,4 +93,9 @@ body {
 .Card2 {
   border: solid #521f90 2px;
   border-radius: 15px;
+}
+@layer components {
+  /* .btn-primary {
+      @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
+  } */
 }
