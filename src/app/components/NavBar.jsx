@@ -14,6 +14,7 @@ function Navbar() {
     const removeActive = () => {
         setIsActive(false)
     }
+    // FALTA ACERTAR OS LINKS DOS BOTÕES PARA AS RESPETIVAS PÁGINAS
     return (
         <div className="App">
             <header className="App-header">
@@ -21,22 +22,24 @@ function Navbar() {
                     {/* logo */}
                     <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
                         <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`} ><img src="/imgs/spoti-logo.svg" alt="Home-Logo" className="icon" /></a>
-                        </li>
-                        <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`}><img src="/imgs/spoti-singer-icon.svg" alt="Home-Logo" className="icon" /></a>
-                        </li>
-                        <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`}>
-                                <img src="/imgs/spoti-musics-icon.svg" alt="Home-Logo" className="icon" /></a>
-                        </li>
-                        <li onClick={removeActive}>
-                            <a href='#home' className="icon">
-                                <img src="/imgs/spoti-albums-icon.svg" alt="Home-Logo" className="icon" /></a>
+                            <a href='#home' className={`${styles.navLink}`} >
+                                <img src="/imgs/spoti-logo.svg" alt="Home-Logo" className="icon" /></a>
                         </li>
                         <li onClick={removeActive}>
                             <a href='#home' className={`${styles.navLink}`}>
-                                <img src="/imgs/spoti-podcasts-icon.svg" alt="Home-Logo" className="icon" /></a>
+                                <img src="/imgs/spoti-singer-icon.svg" alt="artists" className="icon" /></a>
+                        </li>
+                        <li onClick={removeActive}>
+                            <a href='#home' className={`${styles.navLink}`}>
+                                <img src="/imgs/spoti-musics-icon.svg" alt="musics" className="icon" /></a>
+                        </li>
+                        <li onClick={removeActive}>
+                            <a href='#home' className={`${styles.navLink}`}>
+                                <img src="/imgs/spoti-albums-icon.svg" alt="albums" className="icon" /></a>
+                        </li>
+                        <li onClick={removeActive}>
+                            <a href='#home' className={`${styles.navLink}`}>
+                                <img src="/imgs/spoti-podcasts-icon.svg" alt="podcasts" className="icon" /></a>
                         </li>
                     </ul>
                 </nav>

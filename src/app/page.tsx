@@ -6,7 +6,7 @@ function App() {
     <div>
       <Navbar />
       <main>
-        <h1>Welcome to the App</h1>
+        <h1>aaaaaaaahhhhhhhhhhhhhhhhhhhhhh</h1>
         <p>This is a preview of the NavBar component.</p>
       </main>
     </div>
