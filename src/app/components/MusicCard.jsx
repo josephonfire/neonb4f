@@ -12,7 +12,7 @@ function MusicCard(props) {
             <div className="card-text">
                 <p>#{props.position}</p>
                 <h3>{props.trackName}</h3>
-                <h5>of {props.artistName}</h5>
+                <h5>by {props.artistName}</h5>
                 <p>{Math.round((props.msTotal) / 60000)} minutes played</p>
                 </div>
                 

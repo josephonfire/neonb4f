@@ -1,5 +1,5 @@
 
-import Card from '../components/Card'
+import Card from '../components/Card.jsx'
 import data from '../data/history.json'
 
 import { useTopArtists } from '../hooks/hooks.jsx'

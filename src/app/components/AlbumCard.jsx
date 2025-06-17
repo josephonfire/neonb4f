@@ -10,8 +10,10 @@ function AlbumCard(props) {
                 className="card-img"
             />
             <div className="card-text">
-                <p># 1{props.position}</p>
-                <h3>Primeiro Album Elizabetch e os dois papagaios{props.albumName}</h3></div>
+                <p>#{props.position}</p>
+                <h3>{props.albumName}</h3>
+                <h5>by {props.artistName}</h5>
+                <p>{Math.round((props.msTotal) / 60000)} minutes played</p></div>
         </div>
     )
 }
