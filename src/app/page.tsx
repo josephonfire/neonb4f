@@ -1,15 +1,12 @@
 import React from 'react';
 import Navbar from './components/NavBar';
+import AlbumCard from './components/AlbumCard';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <main>
-        <h1>Welcome to the App</h1>
-        <p>This is a preview of the NavBar component.</p>
-      </main>
-    </div>
+    <>
+      <div><AlbumCard /></div>
+    </>
   );
 }
 
