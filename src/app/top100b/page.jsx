@@ -35,32 +35,5 @@ export default function Page() {
         ))}
       </div>
       </div>
-
-
-      {/* Grid dos cards */}
-      {/*
-      <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full max-w-2xl mx-auto mt-10">
-        <div className="row-span-2 bg-white text-purple-700 flex justify-center items-center text-2xl font-bold rounded-2xl h-68 w-72">
-          Queen
-        </div>
-        <div className="col-start-2 row-start-1 bg-purple-700 text-white flex justify-center items-center rounded-2xl h-32">
-          Bla bla
-        </div>
-        <div className="col-start-2 row-start-2 bg-purple-700 text-white flex justify-center items-center rounded-2xl h-32">
-          Blabla
-        </div>
-        <div className="grid grid-rows-4 gap-4 w-full max-w-2xl mx-auto mt-10 m-5">
-          <div className="col-start-1 bg-purple-700 flex justify-center items-center mx-auto rounded-2xl w-140 p-2.5 h-28">
-            Oi
-          </div>
-          <div className="col-start-1 bg-purple-700 flex justify-center items-center mx-auto rounded-2xl w-140 p-2.5 h-28">
-            Oi
-          </div>
-          <div className="col-start-1 bg-purple-700 flex justify-center items-center mx-auto rounded-2xl w-140 p-2.5 h-28">
-            Oi
-          </div>
-        </div>
-      </div>
-      */}
   );
 }

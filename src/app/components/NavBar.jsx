@@ -1,7 +1,7 @@
 "use client";
 import react, { useState } from 'react';
 import React from 'react';
-import styles from '../navbar.css';
+// import styles from '../navbar.css';
 
 function Navbar() {
     // adding the states 

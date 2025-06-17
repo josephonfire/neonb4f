@@ -1,5 +1,5 @@
 import { Login } from "../components/Login";
-import { NeonButton } from "../components/neon-button";
+import { NeonButton } from "../components/Neon-Button";
  
 
 export default function Page() {
