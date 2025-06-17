@@ -19,29 +19,26 @@ function Navbar() {
             <header className="App-header">
                 <nav className={`${styles.navbar}`}>
                     {/* logo */}
-                    <a href='#home' className={`${styles.logo}`}>Dev. </a>
+                    <a href='#home' className={`${styles.logo}`}>
+                        <img src=".src/app/imgs/spoti-logo.svg" alt="logo" className={`${styles.icon}`}/>Home</a>
                     <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
                         <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`}>Home</a>
+                            <a href='#home' className={`${styles.navLink}`}>Artist</a>
                         </li>
                         <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`}>Catalog</a>
+                            <a href='#home' className={`${styles.navLink}`}>Songs</a>
                         </li>
                         <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`}>All products</a>
+                            <a href='#home' className={`${styles.navLink}`}>Albuns</a>
                         </li>
                         <li onClick={removeActive}>
-                            <a href='#home' className={`${styles.navLink}`}>Contact</a>
+                            <a href='#home' className={`${styles.navLink}`}>Podcasts</a>
                         </li>
                     </ul>
-                    <div className={`${styles.hamburger} ${isActive ? styles.active : ''}`} onClick={toggleActiveClass}>
-                        <span className={`${styles.bar}`}></span>
-                        <span className={`${styles.bar}`}></span>
-                        <span className={`${styles.bar}`}></span>
-                    </div>
+
                 </nav>
             </header>
-        </div>
+        </div >
     );
 }
 export default Navbar;
