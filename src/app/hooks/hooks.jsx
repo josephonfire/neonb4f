@@ -2,7 +2,7 @@ import data from '../data/history.json'
 
 const dataJSON = data;
 
-function useTopArtists(data) {
+export function useTopArtists(data) {
 
     const acc = data.reduce((acc, item)=> { // criar uma variavel que vai percorrer o ficheiro JSON, recebe o seu valor + o item percorrido do ficheiro JSON
 
@@ -19,9 +19,11 @@ function useTopArtists(data) {
 
     const accumulator = Object.values(acc); // variável que tem como valor = [{artistName: Travis, ms_total: xxx}]
 
-    const sorted = accumulator.sort((artistA, artistB) => artistB.ms_total - artistA.ms_total) // ordenar array de objetos por ordem decrescente dos ms_total.
+    const sorted = [...accumulator.sort((artistB, artistA) => artistA.ms_total - artistB.ms_total)] // ordenar array de objetos por ordem decrescente dos ms_total.
 
 
-    return sorted.slice(0-101); // retorno do array de objetos até ao top 100
+    return sorted.slice(1,101); // retorno do array de objetos até ao top 100
 }
+
+
 
