@@ -2,7 +2,7 @@
 import Card from '../components/Card.jsx'
 import data from '../data/history.json'
 
-import { useTopArtists } from '../hooks/hooks.jsx'
+import { useTopArtists, useTopArtists2 } from '../hooks/hooks.jsx'
 
 export default function PageTop() {
    const topArtists = useTopArtists(data)

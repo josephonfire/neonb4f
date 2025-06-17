@@ -77,4 +77,27 @@ export function useTopArtists(data) {
         return sorted.slice(1,101); // retorno do array de objetos até ao top 100 musicas
     }
 
+    // ------------------------------------------------------------- // 
 
+    export function useTopArtists2(data) {
+
+    const acc = data.reduce((acc, item)=> { // criar uma variavel que vai percorrer o ficheiro JSON, recebe o seu valor + o item percorrido do ficheiro JSON
+
+        const artistName = item.master_metadata_album_artist_name; // abrir uma constante com o nome do artista para uniformizar
+
+        if (!acc[artistName]) { // se não encontrares o nome do artista atual
+        acc[artistName] = { artistName, n: 1 }; // criar uma chave que tem como valor 1 objeto com 2 propriedades: artistName, ms_totais - exemplo {Travis Scott: {artistName: Travis, ms_total: xxx}}
+        }
+
+        acc[artistName].n += 1; // se já existir o artistName,  adicionar +1 ao n
+
+        return acc; // retornar o objeto preenchido com propriedades (com pares de chave-valor)
+    }, {})
+
+    const accumulator = Object.values(acc); // variável que tem como valor = [{artistName: Travis, n: xxx}]
+
+    const sorted = [...accumulator.sort((artistB, artistA) => artistA.n - artistB.n)] // ordenar array de objetos por ordem decrescente dos n.
+
+
+    return sorted.slice(1,101); // retorno do array de objetos até ao top 100 artistas
+}
