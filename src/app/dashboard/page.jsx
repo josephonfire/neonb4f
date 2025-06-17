@@ -4,21 +4,22 @@ import { useState } from "react";
 import history from "../data/history.json"
 import DashboardBtn from "../components/Dashboard-btn"
 import "../../css/dashboard.css";
+import GraficoTempoDiario from "../components/GraficoTempoDiario";
 
 // Calcula todo o tempo em minutos, desde a separação do tempo, até a divisao de milisegnds pra horas minutos
-function Stats({ history }) {
+function HorasTotais({ history }) {
   const totalMs = history.reduce((item, a) => item + a.ms_played, 0);
   const minutosTotais = Math.floor(totalMs / 60000);
   const horas = Math.floor(minutosTotais / 60);
   const minutos = minutosTotais % 60;
 
   return (
-  <><div className="bg">
+    <div className="bg">
       <div className="container">
         <div className="logo-circle">
           <img
             src="/imgs/spoti-logo.svg"
-            alt="profile-pic"           // imagem do usuario
+            alt="profile-pic"
             className="logo-img" />
         </div>
       </div>
@@ -35,16 +36,17 @@ function Stats({ history }) {
         <div className="stats-box">
           Tempo de Reprodução: {`${horas}h ${minutos}min`}
         </div>
-        <DashboardBtn></DashboardBtn>
+        <DashboardBtn />
+        <GraficoTempoDiario></GraficoTempoDiario>
       </div>
-    </div></>
+    </div>
   );
 };
 
 export default function Page() {
   return (
   <>
-    <Stats history={history} />
+    <HorasTotais history={history} />
   </>
 );
 }
