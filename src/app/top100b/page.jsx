@@ -1,8 +1,13 @@
 "use client";
 import { useState } from "react";
+import Card from '../components/Card'
+import data from '../data/history.json'
+import { useTopArtists } from '../hooks/hooks.jsx'
+
 
 export default function Page() {
   const [active, setActive] = useState(0);
+  const topArtists = useTopArtists(data)
 
   const buttons = [
     { label: "4 weeks" },
@@ -34,6 +39,18 @@ export default function Page() {
           </button>
         ))}
       </div>
+
+        <div>
+          
+          {topArtists.map((DataMap, index) => {
+            return(
+
+              <div key={DataMap.artistName}>
+                <Card position={index + 1} artistName={DataMap.artistName}/>
+              </div>
+            )
+          })}
+        </div>
       </div>
   );
 }
