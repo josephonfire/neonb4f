@@ -1,15 +1,12 @@
 import React from 'react';
 import Navbar from './components/NavBar';
+import Card from './components/Card';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <main>
-        <h1>aaaaaaaahhhhhhhhhhhhhhhhhhhhhh</h1>
-        <p>This is a preview of the NavBar component.</p>
-      </main>
-    </div>
+    <>
+      <div><Card /></div>
+    </>
   );
 }
 
