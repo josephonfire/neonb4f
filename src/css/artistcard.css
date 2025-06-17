@@ -5,15 +5,7 @@
     font-weight: 600;
     font-style: normal;
   }
-  
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #0a0a0a;
-      --foreground: #ededed;
-      max-width: 600px;
-    }
-  }
   
   body {
     background: var(--background);
@@ -25,7 +17,8 @@
   
   }
   
-  .aCard1 {
+  
+  .Card1 {
     background-color: rgba(255, 255, 255, 0.15);
     display: flex;
     align-items: center;

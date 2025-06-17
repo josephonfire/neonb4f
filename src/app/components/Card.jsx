@@ -1,5 +1,5 @@
-import '../globals.css'
-
+import '../../css/artistcard.css'
+/*artist card component*/
 function Card(props) {
 
     return (
