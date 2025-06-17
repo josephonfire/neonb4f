@@ -1,9 +1,16 @@
+import React from 'react';
+import Navbar from './components/NavBar';
 
-
-export default function Home() {
+function App() {
   return (
     <div>
-      Hello World
+      <Navbar />
+      <main>
+        <h1>Welcome to the App</h1>
+        <p>This is a preview of the NavBar component.</p>
+      </main>
     </div>
   );
 }
+
+export default App;
