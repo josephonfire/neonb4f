@@ -64,7 +64,7 @@ export function useTopArtists(data) {
 
     // ------------------------------------------------------- //
 
-    export function useTopAlbuns(data) {
+    export function useTopAlbums(data) {
 
         const acc = data.reduce((acc, item)=> { // criar uma variavel que vai percorrer o ficheiro JSON, recebe o seu valor + o item percorrido do ficheiro JSON
 
