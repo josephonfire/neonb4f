@@ -24,7 +24,7 @@ function DonnutChart() {
 
     return (
         <div className="pc-box">
-            <h2 className="pc-text">% Artista vs Total</h2>
+            <h2 className="pc-text">% Artista por Estação</h2>
             <div className="piechart">
                 <Doughnut data={data} />
             </div>
