@@ -1,4 +1,5 @@
 import data from '../data/history.json'
+import filterDate from './filterDate'
 
 const dataJSON = data;
 

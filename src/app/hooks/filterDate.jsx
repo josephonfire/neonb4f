@@ -18,31 +18,24 @@ export function filterDate4Weeks (data) {
 
             let pastDate = new Date(mostRecent - daysInMs); // diferença entre a data mais recente e os ms Totais
 
-            return pastDate.toJSON(); // retorna a data ms em JSON
+            return pastDate; // retorna a data ms em JSON
         }
 
         const fourWeeks = daysDifference(28); // data de 28 dias antes da data mais recente
 
 
-    const filteredJSON = data.reduce((filteredJSON, item)=> {
+    const filteredJSON = data.reduce((acc, item)=> { // função de reduzir o array JSON para:
+ 
 
-    if (new Date (item.ts) > fourWeeks && < mostRecent) {
+        if (new Date (item.ts) > fourWeeks && new Date (item.ts) < mostRecent) { // se está entre data recente e 4 semanas atrás dessa data
+            acc.push(item) // envia para o acumulador da função
+        }
 
-    }
+    return acc; // retorna o acumulador
 
-    return filteredJSON;
+    }, [])
 
-    }, {})
+    return filteredJSON; // retorna um array de objetos filtrado por semanas
 
 }
-/*
-    function getDays (data) {
-        const month = data.getMonth()
-        const day = data.getDate()
-
-        if (day <= )// dia pretendido && month se for preciso) return "o que voce queria"
-
-    }
-*/
-
 
