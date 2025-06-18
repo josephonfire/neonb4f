@@ -1,0 +1,22 @@
+.orb-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2; /* ajuste conforme necessário */
+  overflow: hidden;
+}
+
+.mini-orb {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.mini-orb:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
