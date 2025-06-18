@@ -4,7 +4,6 @@ import { useState } from "react";
 import history from "../data/history.json"
 import DashboardBtn from "../components/Dashboard-btn"
 import "../../css/dashboard.css";
-import GraficoTempoDiario from "../components/GraficoTempoDiario";
 
 // Calcula todo o tempo em minutos, desde a separação do tempo, até a divisao de milisegnds pra horas minutos
 function HorasTotais({ history }) {
@@ -37,7 +36,6 @@ function HorasTotais({ history }) {
           Tempo de Reprodução: {`${horas}h ${minutos}min`}
         </div>
         <DashboardBtn />
-        <GraficoTempoDiario></GraficoTempoDiario>
       </div>
     </div>
   );

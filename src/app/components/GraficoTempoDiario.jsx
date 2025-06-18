@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import history from "../data/history.json"
 
 // função do grafico para processar os dados do dia 
@@ -39,17 +39,17 @@ export default function GraficoTempoDiario() {
     return (
     <div style={{ width: "100%", height: 400 }}>
       <h2>Tempo diário que ouviu música: (minutos)</h2>
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart
+      <ResponsiveContainer width="100%" height={400}>
+        <AreaChart
           data={dadosProcessados}
           margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="data" />
+          <XAxis dataKey="data" minTickGap={30}/>
           <YAxis />
           <Tooltip />
-          <Bar dataKey="minutos" fill="#7e22ce" />
-        </BarChart>
+          <Area type="monotone" dataKey="minutos" stroke="#fff" fill="#fff" />
+        </AreaChart>
       </ResponsiveContainer>
     </div>
   );
