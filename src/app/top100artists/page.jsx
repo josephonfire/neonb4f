@@ -17,13 +17,8 @@ export default function PageTop() {
     const topArtists6Month = useTopArtists(filterDate6Months(data));
     const topArtists1Year = useTopArtists(filter1Year(data));
     const [active, setActive] = useState(0);
-<<<<<<< HEAD
-
-
-=======
   
     const router = useRouter();
->>>>>>> 1f6710efe9277b378cdc66f0013581849596f2e2
 
     const buttons = [
       { label: "4 weeks" },
