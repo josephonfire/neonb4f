@@ -1,0 +1,212 @@
+/* Layout principal */
+.login-wrapper {
+  background: white;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1b4b; /* purple-950 */
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #2e1065;
+  min-height: 100vh;
+}
+
+.login-box {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Cabeçalho */
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-container {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(236, 72, 153, 0.2); /* sombra pink */
+  margin-bottom: 1rem;
+}
+
+.logo-img {
+  width: 7rem;
+  height: 7rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px #f472b6;
+}
+
+.subtitle {
+  color: #f9a8d4;
+}
+
+/* Cartão */
+.login-card {
+  background-color: #9333ea;
+  border: 1px solid white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.1);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Formulário */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  color: white;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #f472b6;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.4);
+}
+
+.login-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Checkbox e link */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+.remember input {
+  margin-right: 0.5rem;
+}
+
+.forgot-link {
+  color: #f9a8d4;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  color: #f472b6;
+}
+
+/* Divider */
+.divider {
+  margin: 2rem 0;
+  text-align: center;
+  position: relative;
+  font-size: 0.875rem;
+  color: white;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  background: #4b5563;
+  position: absolute;
+  top: 50%;
+  width: 40%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.divider span {
+  background: #2e1065;
+  padding: 0 1rem;
+  border-radius: 1rem;
+}
+
+/* Social Buttons */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  border: 1px solid #4b5563;
+  background-color: #2e1065;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #374151;
+}
+
+.facebook svg {
+  color: #3b82f6;
+}
+
+.google svg {
+  color: #ef4444;
+}
+
+.github svg {
+  color: #9ca3af;
+}
+
+/* Cadastro */
+.signup-text {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+.signup-text a {
+  color: #f9a8d4;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-text a:hover {
+  color: #f472b6;
+}
