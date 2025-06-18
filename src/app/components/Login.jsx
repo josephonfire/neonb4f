@@ -39,6 +39,7 @@ export function Login() {
 
                 <div className="login-button-wrapper">
                   <NeonButton
+                  href="../dashboard"
                     borderStartColor="#a21caf"
                     borderEndColor="#f472b6"
                     textColor="#fff"
