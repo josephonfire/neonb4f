@@ -47,7 +47,7 @@ export default function GraficoTempoDiario() {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="data" minTickGap={30}/>
           <YAxis />
-          <Tooltip />
+          <Tooltip wrapperStyle={{ width: "50%", color: "#521f90" }} />
           <Area type="monotone" dataKey="minutos" stroke="#fff" fill="#fff" />
         </AreaChart>
       </ResponsiveContainer>

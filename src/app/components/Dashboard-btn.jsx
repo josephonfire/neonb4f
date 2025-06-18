@@ -3,11 +3,7 @@ import { useState } from "react";
 import "../../css/dashboard-btn.css";
 import GraficoHoras from "./GraficoHoras";
 import GraficoTempoDiario from "./GraficoTempoDiario";
-
-// Se não tiver o gráfico de Season, use um placeholder:
-function GraficoSeason() {
-  return <div style={{ color: "#fff", textAlign: "center" }}>Gráfico de Season em breve!</div>;
-}
+import GraficoSeason from "./GraficoSeason";
 
 export default function DashboardBtn() {
   const [active, setActive] = useState(0);
