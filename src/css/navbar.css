@@ -27,7 +27,6 @@ ul {
 
 a {
     text-decoration: none;
-    color: rgb(255, 0, 0);
     font-size: 18px;
 }
 
@@ -38,29 +37,34 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    min-height: 70px;
+    min-height: 40px;
 }
 
-
+.li{
+    width: 100%;
+    height: 100%;
+}
 /* logo  */
 .logo {
-    font-size: 30px;
+    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .icon {
-    width: 5rem;
-    height: 5rem;
+    width: 2rem;
+    height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /*neon effect*/
-    filter: drop-shadow(0 0 20px #521f90) drop-shadow(0 0 10px #bb1afb) drop-shadow(0 0 10px #bb1afb);
+    transform: scale(0.75);
+    color:black
+    
+    
 }
 
 .icon:active {
-    filter: invert(50%);
+    /*neon effect*/
+    filter: drop-shadow(0 0 20px #521f90) drop-shadow(0 0 10px #bb1afb) drop-shadow(0 0 10px #bb1afb);
     transform: scale(0.75);
 }
 
