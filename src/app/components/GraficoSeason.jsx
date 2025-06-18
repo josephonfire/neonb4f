@@ -25,7 +25,9 @@ function minutosPorEstacao(dados) {
 }
 
 // Cores para cada estação do rechart
-const COLORS = ["#6366f1", "#fbbf24", "#22d3ee", "#f472b6"];
+const COLORS = ["#6366f1", "#00BFFF", "#00008B", "#8B008B"];
+
+                // roxo claro.     azul.    azul bebe.    roxo 
 
 // Label customizado, esquece isso so copiei
 const renderCustomizedLabel = ({

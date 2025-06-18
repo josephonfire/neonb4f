@@ -35,8 +35,8 @@ export default function GraficoHoras() {
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="hora" />
-          <YAxis />
+          <XAxis dataKey="hora" stroke="#fff"/>
+          <YAxis stroke="#fff"/>
           <Tooltip wrapperStyle={{ width: "50%", color: "#521f90"
           }} />
           <Area

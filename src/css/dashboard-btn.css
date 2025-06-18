@@ -4,10 +4,27 @@
   gap: 1rem;
   justify-items: center;
   margin-top: 2.5rem; /* mt-10 */
-  max-width: 48rem; /* max-w-3xl */
+  max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  padding: 0 1rem;
 }
+
+/* Telas médias: 2 colunas */
+@media (max-width: 1024px) {
+  .dashboard-btn-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Telas pequenas: 1 coluna */
+@media (max-width: 640px) {
+  .dashboard-btn-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .dashboard-btn {
   width: 100%;
@@ -21,16 +38,36 @@
   color: white;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-align: center;
+  font-weight: 600;
 }
 
+/* Hover */
 .dashboard-btn:hover {
   background-color: #6b21a8; /* hover:bg-purple-600 */
   transform: scale(1.05);
 }
 
+/* Botão ativo */
 .dashboard-btn.active {
   background-color: white;
   color: #7e22ce; /* text-purple-700 */
-  box-shadow: 0 10px 15px -3px rgba(232, 121, 249, 0.3); /* shadow-pink-400/30 */
+  box-shadow: 0 10px 15px -3px rgba(232, 121, 249, 0.3); /* sombra suave */
   transform: scale(1.05);
+}
+
+/* === RESPONSIVIDADE === */
+
+/* Telas médias: 2 colunas */
+@media (max-width: 768px) {
+  .dashboard-btn-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Telas pequenas: 1 coluna */
+@media (max-width: 480px) {
+  .dashboard-btn-container {
+    grid-template-columns: 1fr;
+  }
 }
