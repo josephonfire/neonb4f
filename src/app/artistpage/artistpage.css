@@ -38,7 +38,7 @@
     border: solid #ffffff 1px;
     margin: 1rem;
     box-shadow: 0 0 20px #521f90, 0 0 10px #bb1afb;
-    border-radius: 20px;
+    border-radius: 25px;
     align-content: center;
     padding: 0.5%;
     justify-content: center; }
@@ -55,12 +55,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin: 1rem;
-    
+    margin: 1rem 0;
     gap: 1rem;
-      
 }
 
+.artist-info-bar{
+    display: flex;
+    flex-direction: column;
+}
+
+.top-list{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--foreground);
+    text-align: center;
+    margin-top: 1rem;
+}
 
 
 
