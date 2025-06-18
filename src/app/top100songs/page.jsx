@@ -24,7 +24,7 @@ export default function PageTop() {
    
   return (
     <div>
-      <div><NavBar /></div>
+      <div className={({ isActive }) => isActive ? "icon active" : "icon"}><NavBar /></div>
       <div>
         {/* Grid dos botões */}
       <div className="grid grid-cols-4 gap-4 justify-items-center mt-10 max-w-3xl mx-auto">
