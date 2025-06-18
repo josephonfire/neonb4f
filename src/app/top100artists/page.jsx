@@ -7,6 +7,7 @@ import NavBar from '../components/NavBar.jsx';
 
 import { useTopArtists, useTopArtists2 } from '../hooks/hooks.jsx'
 import { filterDate4Weeks, filterDate6Months, filter1Year} from '../hooks/filterDate.jsx'
+import { useRouter } from "next/navigation";
 
 
 
@@ -17,6 +18,8 @@ export default function PageTop() {
     const topArtists1Year = useTopArtists(filter1Year(data));
     const [active, setActive] = useState(0);
   
+    const router = useRouter();
+
     const buttons = [
       { label: "4 weeks" },
       { label: "6 months" },
@@ -51,7 +54,7 @@ export default function PageTop() {
         {topArtists.map((DataMap, index) => {
           return(
 
-            <div key={DataMap.artistName}>
+            <div key={DataMap.artistName} onClick={() => router.push(`/artistpage/${DataMap.artistName}`)} className="cursor-pointer">
               <Card position={index + 1} artistName={DataMap.artistName}/>
             </div>
           )
