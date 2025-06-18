@@ -51,26 +51,23 @@ a {
 }
 
 .icon {
-    width: 2rem;
-    height: 2rem;
+    width: 5rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     transform: scale(0.75);
-    color:black
-    
-    
 }
 
 .icon:active {
     /*neon effect*/
     filter: drop-shadow(0 0 20px #521f90) drop-shadow(0 0 10px #bb1afb) drop-shadow(0 0 10px #bb1afb);
-    transform: scale(0.75);
+    transform: scale(1);
 }
 
 .icon:focus {
-    filter: invert(100%);
-    transform: scale(0.75);
+    /*filter: invert(100%);*/
+    transform: scale(0.85);
 }
 
 /* ul  */
