@@ -14,7 +14,9 @@ export default function PageTop() {
     const topArtists6Month = useTopArtists(filterDate6Months(data));
     const topArtists1Year = useTopArtists(filter1Year(data));
     const [active, setActive] = useState(0);
-  
+
+
+
     const buttons = [
       { label: "4 weeks" },
       { label: "6 months" },
@@ -45,7 +47,11 @@ export default function PageTop() {
         ))}
       </div>
         
-        {topArtists.map((DataMap, index) => {
+        {(active === 0 ? topArtists4Weeks :
+          active === 1 ? topArtists6Month :
+          active === 2 ? topArtists1Year :
+          topArtists
+          ).map((DataMap, index) => {
           return(
 
             <div key={DataMap.artistName}>
