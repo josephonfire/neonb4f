@@ -1,6 +1,11 @@
 "use client"
 import AlbumCard from '../components/AlbumCard.jsx'
 import data from '../data/history.json'
+<<<<<<< HEAD
+=======
+import NavBar from '../components/NavBar.jsx'; 
+
+>>>>>>> 1f6710efe9277b378cdc66f0013581849596f2e2
 import { useTopAlbuns } from '../hooks/hooks.jsx'
 import { useState } from "react";
 import { filterDate4Weeks, filterDate6Months, filter1Year} from '../hooks/filterDate.jsx'
@@ -15,6 +20,7 @@ export default function PageTop() {
    
   return (
     <div>
+      <NavBar />
       <div>
         
         {topArtists.map((DataMap, index) => {

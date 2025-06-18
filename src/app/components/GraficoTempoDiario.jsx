@@ -39,15 +39,15 @@ export default function GraficoTempoDiario() {
     return (
     <div style={{ width: "100%", height: 400 }}>
       <h2>Tempo diário que ouviu música: (minutos)</h2>
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="100%" height={400} >
         <AreaChart
           data={dadosProcessados}
           margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="data" minTickGap={30}/>
-          <YAxis />
-          <Tooltip />
+          <XAxis dataKey="data" minTickGap={30} stroke="#fff"/>
+          <YAxis stroke="#fff"/>
+          <Tooltip wrapperStyle={{ width: "50%", color: "#521f90" }} />
           <Area type="monotone" dataKey="minutos" stroke="#fff" fill="#fff" />
         </AreaChart>
       </ResponsiveContainer>

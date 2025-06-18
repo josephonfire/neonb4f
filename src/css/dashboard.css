@@ -1,3 +1,12 @@
+/* Reset e box-sizing global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Fundo roxo escuro */
 .bg {
   background-color: #2e1065; /* Tailwind: bg-purple-950 */
@@ -10,33 +19,35 @@
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Círculo branco com logo */
 .logo-circle {
-  width: 5rem;         
-  height: 5rem;          
+  width: 5rem;
+  height: 5rem;
   background-color: white;
-  border-radius: 9999px; 
+  border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;      
+  margin-top: 5rem;
 }
 
 /* Tamanho da logo */
 .logo-img {
-  width: 4rem;  
-  height: 4rem; 
+  width: 4rem;
+  height: 4rem;
 }
 
 /* Nome do usuário */
 .username {
   display: flex;
   justify-content: center;
-  margin-top: 0.875rem; 
-  font-weight: 900;     
-  font-size: 1.875rem;  
+  margin-top: 0.875rem;
+  font-weight: 900;
+  font-size: 1.875rem;
   color: white;
 }
 
@@ -44,30 +55,78 @@
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem; 
+  gap: 1rem;
   justify-items: center;
-  margin-top: 1rem; 
+  margin-top: 1rem;
+  width: 100%;
 }
 
 /* Cada box de estatística */
 .stats-box {
   width: 100%;
-  max-width: 28rem;        
-  background-color: #9333ea; 
-  border-radius: 1rem;     
-  padding: 0.75rem;        
-  color: white;             
-  font-size: 1.125rem;     
-  border: 1px solid white;  
+  max-width: 28rem;
+  background-color: #9333ea;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  color: white;
+  font-size: 1.125rem;
+  border: 1px solid white;
 }
 
+/* Container do gráfico */
 .dashboard-grafico-container {
   width: 100%;
   max-width: 900px;
   margin: 2rem auto 0 auto;
   min-height: 400px;
-  background: #3b0764; /* opcional: fundo para destacar o gráfico */
+  background: #c197e1; /* opcional: fundo para destacar o gráfico */
   border-radius: 1rem;
   padding: 1rem;
   box-sizing: border-box;
+}
+
+/* === RESPONSIVIDADE === */
+
+/* Expandir a grade em telas médias */
+@media (min-width: 640px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Expandir mais ainda em telas maiores */
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .logo-circle {
+    width: 6rem;
+    height: 6rem;
+    margin-top: 1rem;
+  }
+
+  .logo-img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .username {
+    font-size: 2.25rem;
+  }
+
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+  .dashboard-grafico-container {
+    padding: 0.5rem;
+    min-height: 300px;
+  }
 }

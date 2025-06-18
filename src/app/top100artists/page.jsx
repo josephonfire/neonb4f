@@ -3,8 +3,11 @@
 import { useState } from "react";
 import Card from '../components/Card'
 import data from '../data/history.json'
+import NavBar from '../components/NavBar.jsx'; 
+
 import { useTopArtists, useTopArtists2 } from '../hooks/hooks.jsx'
 import { filterDate4Weeks, filterDate6Months, filter1Year} from '../hooks/filterDate.jsx'
+import { useRouter } from "next/navigation";
 
 
 
@@ -14,8 +17,13 @@ export default function PageTop() {
     const topArtists6Month = useTopArtists(filterDate6Months(data));
     const topArtists1Year = useTopArtists(filter1Year(data));
     const [active, setActive] = useState(0);
+<<<<<<< HEAD
 
 
+=======
+  
+    const router = useRouter();
+>>>>>>> 1f6710efe9277b378cdc66f0013581849596f2e2
 
     const buttons = [
       { label: "4 weeks" },
@@ -26,6 +34,7 @@ export default function PageTop() {
    
   return (
     <div>
+      <div><NavBar /></div>
       <div>
 
         {/* Grid dos botões */}
@@ -54,7 +63,7 @@ export default function PageTop() {
           ).map((DataMap, index) => {
           return(
 
-            <div key={DataMap.artistName}>
+            <div key={DataMap.artistName} onClick={() => router.push(`/artistpage/${DataMap.artistName}`)} className="cursor-pointer">
               <Card position={index + 1} artistName={DataMap.artistName}/>
             </div>
           )
