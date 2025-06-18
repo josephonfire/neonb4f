@@ -4,6 +4,7 @@ import { useState } from "react";
 import history from "../data/history.json"
 import DashboardBtn from "../components/Dashboard-btn"
 import "../../css/dashboard.css";
+import NavBar from "../components/NavBar.jsx"; 
 
 // Calcula todo o tempo em minutos, desde a separação do tempo, até a divisao de milisegnds pra horas minutos
 function HorasTotais({ history }) {
@@ -15,6 +16,7 @@ function HorasTotais({ history }) {
   return (
     <div className="bg">
       <div className="container">
+        <NavBar />
         <div className="logo-circle">
           <img
             src="/imgs/spoti-logo.svg"
