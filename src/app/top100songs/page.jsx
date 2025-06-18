@@ -1,6 +1,7 @@
 
 import MusicCard from '../components/MusicCard.jsx'
 import data from '../data/history.json'
+import NavBar from '../components/NavBar.jsx'; 
 
 import { useTopSongs } from '../hooks/hooks.jsx'
 
@@ -10,6 +11,7 @@ export default function PageTop() {
    
   return (
     <div>
+      <div><NavBar /></div>
       <div>
         
         {topSongs.map((DataMap, index) => {

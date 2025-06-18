@@ -1,4 +1,5 @@
 import data from '../data/history.json'
+import filterDate from './filterDate'
 
 const dataJSON = data;
 
@@ -101,3 +102,6 @@ export function useTopArtists(data) {
 
     return sorted.slice(1,101); // retorno do array de objetos até ao top 100 artistas
 }
+
+// ---------------------------------------------------------------- //
+

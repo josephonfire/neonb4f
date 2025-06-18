@@ -4,6 +4,7 @@ import { useState } from "react";
 import history from "../data/history.json";
 import DashboardBtn from "../components/Dashboard-btn";
 import "../../css/dashboard.css";
+import NavBar from "../components/NavBar.jsx"; 
 
 function HorasTotais({ history }) {
   const totalMs = history.reduce((acc, item) => acc + item.ms_played, 0);
@@ -17,6 +18,7 @@ function HorasTotais({ history }) {
     <div className="bg">
       {/* Logo e Nome */}
       <div className="container">
+        <NavBar />
         <div className="logo-circle">
           <img
             src="/imgs/spoti-logo.svg"

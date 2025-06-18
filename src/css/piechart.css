@@ -14,27 +14,34 @@ body {
   font-style: normal;
 }
 
-.pieChart {
+.pc-box {
   background-color: #521f9050;
   display: flex;
   align-items: center;
+  flex-direction: column;
   border: solid #ffffff 1px;
-  margin: 1rem;
+  margin: 1rem 0;
   box-shadow: 0 0 20px #521f90, 0 0 10px #bb1afb;
   border-radius: 20px;
-  align-content: center;
-  padding: 0.5%;
+  width: 45%; /* Faz a caixa ocupar toda a largura da janela */
+  height: auto;
+  padding: 1rem;
+text-align: center;
 }
 
-.ib-text p {
+.pc-text h2 {
   font-size: 1rem;
   color: #ffffff;
-  margin: 0.5rem 0.5rem 0.5rem 1rem;
+  margin: 0.5rem;
+  display: flex;
 }
 
-.ib-icon{
-  width:3rem;
-  height: 3rem;
-  align-items: center;
-  filter: drop-shadow(0 0 10px #bb1afb);
+.piechart {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
 }

@@ -12,11 +12,16 @@ import ArtistInfoBar from '../app/components/ArtistInfoBar.jsx';
 import ArtistInfoBar2 from '../app/components/ArtistInfoBar2.jsx';
 import ArtistInfoBar3 from '../app/components/ArtistInfoBar3.jsx';
 import PieChart from '../app/components/PieChart.jsx'
+import DonnutChart from '../app/components/DonnutChart.jsx'
+
 
 function App() {
   return (
     <>
       <div><NavBar /></div>
+      <br />
+      
+      <br />
       <div><Card /></div>
       <div><AlbumCard /></div>
       <div><MusicCard /></div>
@@ -34,6 +39,7 @@ function App() {
       <br />
       <p>pie charts</p>
       <div><PieChart/></div>
+      <div><DonnutChart/></div>
     </>
   )
 };

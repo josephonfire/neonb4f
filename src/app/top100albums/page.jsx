@@ -1,6 +1,7 @@
 
 import AlbumCard from '../components/AlbumCard.jsx'
 import data from '../data/history.json'
+import NavBar from '../components/NavBar.jsx'; 
 
 import { useTopAlbuns } from '../hooks/hooks.jsx'
 
@@ -10,6 +11,7 @@ export default function PageTop() {
    
   return (
     <div>
+      <NavBar />
       <div>
         
         {topArtists.map((DataMap, index) => {

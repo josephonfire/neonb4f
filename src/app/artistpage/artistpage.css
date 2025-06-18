@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@import url("https://fonts.google.com/share?selection.family=Gabarito:wght@400..900");
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+    max-width: 600px;
+}
+
+:root {
+    --animate-neon-slide-right: neonSlideRight 2s linear infinite;
+    --animate-neon-slide-down: neonSlideDown 2s linear infinite;
+    --animate-neon-slide-left: neonSlideLeft 2s linear infinite;
+    --animate-neon-slide-up: neonSlideUp 2s linear infinite;
+}
+
+.artist-profile-photo {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+}
+.artist-name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--foreground);
+    text-align: center;
+    margin-top: 0.25rem;
+}
+
+.artist-position {
+    background-color: #521f9050;
+    display: flex;
+    align-items: center;
+    border: solid #ffffff 1px;
+    margin: 1rem;
+    box-shadow: 0 0 20px #521f90, 0 0 10px #bb1afb;
+    border-radius: 25px;
+    align-content: center;
+    padding: 0.5%;
+    justify-content: center; }
+
+  .artist-position p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+    text-align: center;
+  }
+
+.charts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.artist-info-bar{
+    display: flex;
+    flex-direction: column;
+}
+
+.top-list{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--foreground);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+
+
+
+/* Neon Slide Animations */
+@keyframes neonSlideRight {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes neonSlideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes neonSlideLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes neonSlideUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.gabarito {
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: "Gabarito", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+        max-width: 600px;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+}
