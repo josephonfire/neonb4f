@@ -60,3 +60,14 @@
   font-size: 1.125rem;     
   border: 1px solid white;  
 }
+
+.dashboard-grafico-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto 0 auto;
+  min-height: 400px;
+  background: #3b0764; /* opcional: fundo para destacar o gráfico */
+  border-radius: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
