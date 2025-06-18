@@ -1,13 +1,10 @@
 "use client"
 import MusicCard from '../components/MusicCard.jsx'
 import data from '../data/history.json'
-<<<<<<< HEAD
 import { useState } from "react";
 import { filterDate4Weeks, filterDate6Months, filter1Year} from '../hooks/filterDate.jsx'
-=======
 import NavBar from '../components/NavBar.jsx'; 
 
->>>>>>> 1f6710efe9277b378cdc66f0013581849596f2e2
 import { useTopSongs } from '../hooks/hooks.jsx'
 
 export default function PageTop() {
