@@ -1,27 +1,74 @@
+
+/* centralizar tela */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Layout principal */
 .login-wrapper {
-  background: white;
-  color: white;
-  width: 100vw;
-  height: 100vh;
-  padding: 1rem;
+
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1e1b4b; /* purple-950 */
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .login-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 1rem;
+  align-items: center;
+
+  background: linear-gradient(270deg, #6b2ddf, #aa12d8, #9333ea);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+  box-shadow:
+    0 0 15px rgba(107, 45, 223, 0.4),
+    0 0 25px rgba(61, 6, 150, 0.3);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
+  flex-direction: column;
   background-color: #2e1065;
-  min-height: 100vh;
+  padding: 2rem;
+
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseNeon {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #bb00ff)
+            drop-shadow(0 0 10px #bb00ff)
+            drop-shadow(0 0 15px #bb00ff);
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #d100ff)
+            drop-shadow(0 0 20px #d100ff)
+            drop-shadow(0 0 30px #d100ff);
+    transform: scale(1.05);
+  }
+}
+
+/* Login box */
 .login-box {
-  max-width: 400px;
   width: 100%;
 }
 
@@ -32,16 +79,17 @@
 }
 
 .logo-container {
-  display: inline-block;
+  display: inline-block;  
+animation: gradientShift 10s ease infinite;
   padding: 1rem;
   border-radius: 9999px;
-  box-shadow: 0 0 10px rgba(236, 72, 153, 0.2); /* sombra pink */
   margin-bottom: 1rem;
 }
 
 .logo-img {
   width: 7rem;
   height: 7rem;
+  animation: pulseNeon 2s ease-in-out infinite;
 }
 
 .title {
@@ -65,7 +113,18 @@
 }
 
 .card-body {
+   background-color: #121212; /* preto menos intenso */
   padding: 2rem;
+  border-radius: 1rem;
+  color: white;
+
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #7b39ff, #a366ff, #7b39ff) 1;
+  box-shadow:
+    0 0 10px #7b39ff,
+    0 0 20px #a366ff,
+    0 0 30px #7b39ff,
+    inset 0 0 10px #7b39ff;
 }
 
 /* Formulário */
@@ -75,11 +134,21 @@
   gap: 1.5rem;
 }
 
+.neon-login-button {
+  width: 50%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  border: none;
+}
+
 .form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
   color: white;
   font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 .form-group input {
@@ -90,6 +159,7 @@
   border-radius: 0.5rem;
   color: white;
   transition: 0.3s;
+  font-size: 1rem;
 }
 
 .form-group input:focus {
@@ -126,38 +196,48 @@
   color: #f472b6;
 }
 
-/* Divider */
+/* linha do entre com */
 .divider {
-  margin: 2rem 0;
+  display: flex;
+  align-items: center;
   text-align: center;
+  margin: 2rem 0;
+  font-size: 1rem;
+  color: #bb00ff; /* roxo neon */
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-shadow:
+    0 0 5px #bb00ff,
+    0 0 10px #bb00ff,
+    0 0 20px #bb00ff,
+    0 0 40px #d100ff,
+    0 0 80px #d100ff;
   position: relative;
-  font-size: 0.875rem;
-  color: white;
+  z-index: 1;
 }
 
+/* Linhas neon sutis do lado */
 .divider::before,
 .divider::after {
   content: "";
-  height: 1px;
-  background: #4b5563;
-  position: absolute;
-  top: 50%;
-  width: 40%;
-}
-
-.divider::before {
-  left: 0;
-}
-
-.divider::after {
-  right: 0;
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #bb00ff,
+    transparent
+  );
+  margin: 0 1rem;
+  filter: drop-shadow(0 0 6px #bb00ff);
 }
 
 .divider span {
-  background: #2e1065;
   padding: 0 1rem;
-  border-radius: 1rem;
+  color: #e9e9e9;
+  font-weight: 500;
 }
+
 
 /* Social Buttons */
 .social-login {
@@ -171,27 +251,36 @@
   width: 40px;
   height: 40px;
   border-radius: 0.5rem;
-  border: 1px solid #4b5563;
-  background-color: #2e1065;
+  border: none;
+  background-color: #bb00ff;
   cursor: pointer;
-  transition: background 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.2s;
+
+  box-shadow: 0 0 5px rgba(147, 51, 234, 0.4), 0 0 10px rgba(147, 51, 234, 0.2);
 }
 
 .social-btn:hover {
-  background-color: #374151;
+  background-color: #ff02c8;
+  transform: scale(1.05);
+  box-shadow:
+    0 0 8px rgba(147, 51, 234, 0.5),
+    0 0 15px rgba(200, 100, 255, 0.3);
 }
 
-.facebook svg {
-  color: #3b82f6;
+.social-icon {
+  color: #e9d5ff; /* um roxo claro, elegante */
+  font-size: 18px;
+  filter: drop-shadow(0 0 2px rgba(147, 51, 234, 0.4));
+  transition: transform 0.3s ease;
 }
 
-.google svg {
-  color: #ef4444;
+.social-btn:hover .social-icon {
+  transform: scale(1.15);
 }
 
-.github svg {
-  color: #9ca3af;
-}
 
 /* Cadastro */
 .signup-text {
@@ -209,4 +298,107 @@
 
 .signup-text a:hover {
   color: #f472b6;
+}
+
+/* Responsividade iphone */
+@media (max-width: 420px) {
+  .login-wrapper {
+    padding: 0.5rem;
+  }
+
+  .login-container {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .logo-img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .form-group input {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .social-login {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .social-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .signup-text {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsividade pc */
+@media (min-width: 1024px) {
+  .login-container {
+    padding: 2rem 3rem;
+  }
+
+  .login-box {
+    max-width: 500px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .logo-img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .form-group input {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .neon-frame {
+    padding: 1rem;
+    max-width: 95%;
+  }
+
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .logo-img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .form-group input {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .social-login {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .social-btn {
+    width: 36px;
+    height: 36px;
+  }
 }
