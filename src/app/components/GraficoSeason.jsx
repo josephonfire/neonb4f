@@ -59,7 +59,7 @@ export default function GraficoSeasonPie() {
   return (
     <div style={{ width: "100%", height: 400 }}>
       <h2>Tempo de música por estação do ano</h2>
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="100%" height={400} margin="10px">
         <PieChart>
           <Pie
             data={data}
