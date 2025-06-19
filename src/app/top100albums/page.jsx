@@ -28,15 +28,14 @@ export default function PageTop() {
     { label: "All Time" },
   ];
 
-  const albumList = 
-    active === 0 ? topAlbums4Weeks :
-    active === 1 ? topAlbums6Month :
-    active === 2 ? topAlbums1Year :
-    topAlbums;
+  
 
+
+   
   return (
     <Background>
-    <div>
+    
+    
       <div className={({ isActive }) => isActive ? "icon active" : "icon"}><NavBar /></div>
       <div><h1 className="list-title">Top 100 Albums</h1></div>
 
@@ -62,8 +61,8 @@ export default function PageTop() {
 
         {(active === 0 ? topAlbums4Weeks :
           active === 1 ? topAlbums6Month :
-            active === 2 ? topAlbums1Year :
-              topAlbums
+          active === 2 ? topAlbums1Year :
+          topAlbums
         ).map((DataMap, index) => {
           return (
 
@@ -72,7 +71,7 @@ export default function PageTop() {
             </div>
           )
         })}
-      </div>
+    
     </div>
     </Background>
   );

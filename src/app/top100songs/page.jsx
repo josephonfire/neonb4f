@@ -28,6 +28,8 @@ export default function PageTop() {
   return (
     <Background>
     <div>
+
+      
       <div className={({ isActive }) => isActive ? "icon active" : "icon"}><NavBar /></div>
       <div><h1 className="list-title">Top 100 Músicas</h1></div>
 
