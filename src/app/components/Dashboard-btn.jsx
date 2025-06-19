@@ -1,17 +1,17 @@
 "use client";
 import { useState } from "react";
 import "../../css/dashboard-btn.css";
-import GraficoHoras from "./GraficoHoras";
-import GraficoTempoDiario from "./GraficoTempoDiario";
-import GraficoSeason from "./GraficoSeason";
+import GraficoHoras from "../components/GraficoHoras"
+import GraficoSeasonPie from "../components/GraficoSeason"
+import GraficoMediaMovel7Dias from "../components/GraficoTempoDiario"
 
 export default function DashboardBtn() {
   const [active, setActive] = useState(0);
 
   const graficos = [
-    <GraficoTempoDiario key="tempo" />,
+    <GraficoMediaMovel7Dias key="tempo" />,
     <GraficoHoras key="horas" />,
-    <GraficoSeason key="season" />
+    <GraficoSeasonPie key="season" />
   ];
 
   const buttons = [

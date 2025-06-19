@@ -1,17 +1,24 @@
 import { NeonButton } from "./Neon-Button";
+import "../../css/background.css";
+import { Background } from "../components/Background";
 import "../../css/login.css";
+import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa";
 
 export function Login() {
   return (
-    <div className="login-wrapper">
+    <Background>
       <div className="login-container">
         <div className="login-box">
           <div className="login-header">
             <div className="logo-container">
-              <img src="/imgs/spoti-logo.svg" alt="Spotify Logo" className="logo-img" />
+              <img
+                src="/imgs/spoti-logo.svg"
+                alt="Spotify Logo"
+                className="logo-img"
+              />
             </div>
             <h2 className="title">Spotidados</h2>
-            <p className="subtitle">asd</p>
+
           </div>
 
           <div className="login-card">
@@ -23,7 +30,7 @@ export function Login() {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Bom dia flor"
+                    placeholder="Digite seu e-mail"
                   />
                 </div>
 
@@ -39,11 +46,11 @@ export function Login() {
 
                 <div className="login-button-wrapper">
                   <NeonButton
-                  href="../dashboard"
-                    borderStartColor="#a21caf"
-                    borderEndColor="#f472b6"
+                    href="../dashboard"
+                    borderStartColor="#bb00ff"
+                    borderEndColor="#bb00ff"
                     textColor="#fff"
-                    backgroundColor="transparent"
+                    backgroundColor="#1f2933"
                     className="neon-login-button"
                   >
                     <span>Login</span>
@@ -55,7 +62,9 @@ export function Login() {
                     <input type="checkbox" name="remember-me" />
                     Lembrar minha password
                   </label>
-                  <a href="#" className="forgot-link">Esqueci minha password</a>
+                  <a href="#" className="forgot-link">
+                    Esqueci minha password
+                  </a>
                 </div>
               </form>
 
@@ -64,19 +73,29 @@ export function Login() {
               </div>
 
               <div className="social-login">
-                <button className="social-btn facebook" title="Facebook"></button>
-                <button className="social-btn google" title="Google"></button>
-                <button className="social-btn github" title="GitHub"></button>
+                <button className="social-btn" title="Facebook">
+                  <FaFacebookF size={20} color="#fff" />
+                </button>
+                <button className="social-btn" title="Google">
+                  <FaGoogle size={20} color="#fff" />
+                </button>
+                <button className="social-btn" title="GitHub">
+                  <FaGithub size={20} color="#fff" />
+                </button>
               </div>
 
               <p className="signup-text">
-                Não tens uma conta?
+                Não tem uma conta?
                 <a href="#"> Cadastre-se agora</a>
               </p>
             </div>
+
           </div>
+          <p className="subtitle">Desenvolvido por: <br></br>
+            Elisabete Farinha, Filipe Chinita e José Rodrigues
+          </p>
         </div>
       </div>
-    </div>
+    </Background>
   );
 }

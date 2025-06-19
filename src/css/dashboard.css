@@ -1,4 +1,4 @@
-/* Reset e box-sizing global */
+/* Reset global */
 *,
 *::before,
 *::after {
@@ -7,20 +7,78 @@
   padding: 0;
 }
 
-/* Fundo roxo escuro */
-.bg {
-  background-color: #2e1065; /* Tailwind: bg-purple-950 */
+/* Layout principal centralizado com fundo animado */
+.dashboard-wrapper {
+  width: 100vw; /* usa 100% da largura da viewport */
   min-height: 100vh;
-  padding-left: 1rem; /* Tailwind: px-4 */
-  padding-right: 1rem;
-}
-
-/* Centraliza */
-.container {
+  overflow-x: hidden; /* bloqueia overflow horizontal */
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  background: linear-gradient(270deg, #6b2ddf, #aa12d8, #9333ea);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+
+  box-shadow:
+    0 0 15px rgba(107, 45, 223, 0.4),
+    0 0 25px rgba(61, 6, 150, 0.3);
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Container branco com borda neon */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza horizontalmente */
+  justify-content: center;
+  padding: 0.5rem;
+  width: 90vw;
+  max-width: 1200px;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+  border: 4px solid;
+  border-image: linear-gradient(135deg, #00f0ff, #8a2be2, #00f0ff) 1;
+  animation: borderRotate 5s linear infinite;
+  border-radius: 1rem;
+  box-shadow:
+    0 0 15px rgba(0, 240, 255, 0.4),
+    0 0 30px rgba(138, 43, 226, 0.4);
+}
+
+
+@keyframes borderRotate {
+  0% {
+    border-image-source: linear-gradient(135deg, #00f0ff, #8a2be2, #00f0ff);
+  }
+  50% {
+    border-image-source: linear-gradient(135deg, #8a2be2, #00f0ff, #8a2be2);
+  }
+  100% {
+    border-image-source: linear-gradient(135deg, #00f0ff, #8a2be2, #00f0ff);
+  }
+}
+
+/* Container para logo e nome do usuário */
+.container {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 /* Círculo branco com logo */
@@ -32,10 +90,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
-/* Tamanho da logo */
 .logo-img {
   width: 4rem;
   height: 4rem;
@@ -43,15 +100,15 @@
 
 /* Nome do usuário */
 .username {
-  display: flex;
-  justify-content: center;
   margin-top: 0.875rem;
   font-weight: 900;
   font-size: 1.875rem;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
-/* Grid das estatísticas */
+/* Grid estatísticas */
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -61,72 +118,43 @@
   width: 100%;
 }
 
-/* Cada box de estatística */
+/* Caixa estatística */
 .stats-box {
   width: 100%;
   max-width: 28rem;
-  background-color: #9333ea;
+  background-color: #301946;
   border-radius: 1rem;
   padding: 0.75rem;
   color: white;
   font-size: 1.125rem;
   border: 1px solid white;
+  text-align: center;
 }
 
-/* Container do gráfico */
+/* Container gráfico */
 .dashboard-grafico-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 900px; /* mesmo valor do container de botões */
   margin: 2rem auto 0 auto;
-  min-height: 400px;
-  background: #c197e1; /* opcional: fundo para destacar o gráfico */
+  min-height: 300px;
+  background: #c197e1;
   border-radius: 1rem;
   padding: 1rem;
   box-sizing: border-box;
+  overflow-y: hidden;
 }
 
-/* === RESPONSIVIDADE === */
 
-/* Expandir a grade em telas médias */
-@media (min-width: 640px) {
-  .stats-grid {
+
+/* Responsividade para os botões (deixe esse trecho no dashboard-btn.css) */
+@media (max-width: 1024px) {
+  .dashboard-btn-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Expandir mais ainda em telas maiores */
-@media (min-width: 1024px) {
-  .stats-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .logo-circle {
-    width: 6rem;
-    height: 6rem;
-    margin-top: 1rem;
-  }
-
-  .logo-img {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .username {
-    font-size: 2.25rem;
-  }
-
-  .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: flex-start;
-  }
-}
-
-/* Ajustes para telas menores */
-@media (max-width: 600px) {
-  .dashboard-grafico-container {
-    padding: 0.5rem;
-    min-height: 300px;
+@media (max-width: 640px) {
+  .dashboard-btn-container {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,55 +1,106 @@
 import React from "react";
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
-import history from "../data/history.json"
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Legend,
+} from "recharts";
+import history from "../data/history.json";
 
-// função do grafico para processar os dados do dia 
 function processarDados(dados) {
-  // criar objeto vazio para guardar a soma ms por dia
-  const ms = {};
-
-  dados.forEach(item => {
-    // pegar só a data do dia
-    const data = item.ts.split("T")[0]
-
-    //se ainda nao existir o dia no obj, vira 0 só pra somar
-    if (!ms[data]) {
-      ms[data] = 0;
-    }
-
-    // soma dos ms 
-    ms[data] += item.ms_played;
+  const msPorDia = {};
+  dados.forEach((item) => {
+    const data = item.ts.split("T")[0];
+    if (!msPorDia[data]) msPorDia[data] = 0;
+    msPorDia[data] += item.ms_played;
   });
-
-  const processados = Object.entries(ms).map(([data, ms]) => {
-    // divide ms por 60000 ja que cada 1000 é 1 segundo
-    const minutos = Math.floor(ms / 60000);
-    return { data, minutos }
-  });
-
-  // sort no array do menor para maior usando date para criar as "variaveis"
-  processados.sort((a, b) => new Date(a.data) - new Date(b.data));
-
-  return processados;
+  const arr = Object.entries(msPorDia).map(([data, ms]) => ({
+    data,
+    minutos: ms / 60000,
+  }));
+  arr.sort((a, b) => new Date(a.data) - new Date(b.data));
+  return arr;
 }
 
-export default function GraficoTempoDiario() {
-    // processar os dados da funcao no page do dashboard
-    const dadosProcessados = processarDados(history);
+function calcularMediaMovel(data, windowSize = 7) {
+  const mediasMoveis = [];
+  for (let i = 0; i < data.length; i++) {
+    const start = Math.max(0, i - windowSize + 1);
+    const windowSlice = data.slice(start, i + 1);
+    const soma = windowSlice.reduce((acc, val) => acc + val.minutos, 0);
+    const media = soma / windowSlice.length;
+    mediasMoveis.push({
+      data: data[i].data,
+      mediaMovel: parseFloat(media.toFixed(2)),
+    });
+  }
+  return mediasMoveis;
+}
 
-    return (
-    <div style={{ width: "100%", height: 400 }}>
-      <h2>Tempo diário que ouviu música: (minutos)</h2>
-      <ResponsiveContainer width="100%" height={400} >
-        <AreaChart
-          data={dadosProcessados}
-          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+export default function GraficoMediaMovel7Dias() {
+  const dadosProcessados = processarDados(history);
+  const dadosMediaMovel = calcularMediaMovel(dadosProcessados, 7);
+
+  return (
+    <div style={{ width: "100%", height: 450, color: "#fff" }}>
+      <h2
+        style={{
+          textAlign: "center",
+          marginBottom: "1rem",
+          color: "#d8b4fe",
+          fontWeight: "bold",
+          textShadow: "0 0 5px #8b5cf6",
+        }}
+      >
+        Média móvel diária (7 dias) - minutos ouvindo música
+      </h2>
+      <ResponsiveContainer width="100%" height={400}>
+        <LineChart
+          data={dadosMediaMovel}
+          margin={{ top: 20, right: 40, left: 20, bottom: 20 }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="data" minTickGap={30} stroke="#fff"/>
-          <YAxis stroke="#fff"/>
-          <Tooltip wrapperStyle={{ width: "50%", color: "#521f90" }} />
-          <Area type="monotone" dataKey="minutos" stroke="#fff" fill="#fff" />
-        </AreaChart>
+          <CartesianGrid stroke="#7c3aed" strokeDasharray="5 5" />
+          <XAxis
+            dataKey="data"
+            tick={{ fill: "#ffffff" }}
+            tickFormatter={(date) => date.slice(5)}
+            minTickGap={20}
+            stroke="#ffffff"
+          />
+          <YAxis
+            stroke="#ffffff"
+            tick={{ fill: "#ffffff" }}
+            domain={[0, "dataMax + 10"]}
+          />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "#6d28d9",
+              borderRadius: "8px",
+              borderColor: "#a78bfa",
+              color: "#fafafa",
+            }}
+            labelStyle={{ color: "#ffffff" }}
+            itemStyle={{ color: "#ffffff" }}
+          />
+          <Legend
+            verticalAlign="top"
+            align="right"
+            wrapperStyle={{ color: "#ffffff", fontWeight: "bold" }}
+          />
+          <Line
+            type="monotone"
+            dataKey="mediaMovel"
+            stroke="#a78bfa"
+            strokeWidth={3}
+            dot={false}
+            name="Média móvel 7 dias"
+            activeDot={{ r: 6, stroke: "#7c3aed", strokeWidth: 2 }}
+          />
+        </LineChart>
       </ResponsiveContainer>
     </div>
   );

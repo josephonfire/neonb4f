@@ -1,5 +1,5 @@
 //pag artista
-
+"use client"
 import React from 'react';
 import './artistpage.css'; // Import artist page styles
 import NavBar from '../components/NavBar';

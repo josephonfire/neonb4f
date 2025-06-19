@@ -1,12 +1,15 @@
 "use client";
 import react, { useState } from 'react';
 import React from 'react';
-import styles from '../../css/NavBar.css';
+import styles from '../../css/navbar.css';
+import { useRouter } from 'next/navigation';
+
+
 
 
 function Navbar() {
     // adding the states 
-    const [isActive, setIsActive] = useState(false);
+    const [isActive, setIsActive] = useState(0);
     //add the active class
     const toggleActiveClass = () => {
         setIsActive(!isActive);
@@ -15,15 +18,17 @@ function Navbar() {
     const removeActive = () => {
         setIsActive(false)
     }
-    // FALTA ACERTAR OS LINKS DOS BOTÕES PARA AS RESPETIVAS PÁGINAS
+
+    
     return (
+        
         <div className="App">
             <header className="App-header">
                 <nav className={`${styles.navbar}`}>
                     {/* logo */}
                     <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
                         <li onClick={removeActive}>
-                            <a href='/dashboard' className={`${styles.navLink}`} >
+                            <a href='/dashboard' className={({ isActive }) => isActive ? "icon active" : "icon"} >
                                 <img src="/imgs/spoti-logo.svg" alt="Home-Logo" className="icon" /></a>
                         </li>
                         <li onClick={removeActive}>
@@ -48,4 +53,5 @@ function Navbar() {
         </div >
     );
 }
+
 export default Navbar;

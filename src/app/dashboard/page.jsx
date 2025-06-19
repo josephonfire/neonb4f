@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useState } from "react";
+import React from "react";
 import history from "../data/history.json";
 import DashboardBtn from "../components/Dashboard-btn";
 import "../../css/dashboard.css";
-import NavBar from "../components/NavBar.jsx"; 
+import NavBar from "../components/NavBar.jsx";
 
 function HorasTotais({ history }) {
   const totalMs = history.reduce((acc, item) => acc + item.ms_played, 0);
@@ -12,10 +12,11 @@ function HorasTotais({ history }) {
   const horas = Math.floor(minutosTotais / 60);
   const minutos = minutosTotais % 60;
 
-  const totalFaixas = history.filter(item => item.reason_end === "endplay").length;
+  const totalFaixas = history.filter((item) => item.reason_end === "endplay")
+    .length;
 
   return (
-    <div className="bg">
+    <div className="neon-frame">
       {/* Logo e Nome */}
       <div className="container">
         <NavBar />
@@ -28,18 +29,15 @@ function HorasTotais({ history }) {
         </div>
       </div>
 
-      <div className="username">Usuário</div>
+      <div className="username">Nome do Usuário</div>
 
       {/* Estatísticas */}
       <div className="stats-grid">
+        <div className="stats-box">Reproduções: {history.length}</div>
+        <div className="stats-box">Faixas Ouvidas: {totalFaixas}</div>
         <div className="stats-box">
-          Reproduções: {history.length}
-        </div>
-        <div className="stats-box">
-          Faixas Ouvidas: {totalFaixas}
-        </div>
-        <div className="stats-box">
-          Tempo de Reprodução: {`${horas}h ${minutos}min`}
+          Tempo de Reprodução: <br>
+          </br>{`${horas} h   ${minutos} min`}
         </div>
       </div>
 
@@ -47,15 +45,16 @@ function HorasTotais({ history }) {
       <div className="dashboard-btn-container">
         <DashboardBtn />
       </div>
-
     </div>
   );
 }
 
 export default function Page() {
   return (
-    <>
-      <HorasTotais history={history} />
-    </>
+    <div className="dashboard-wrapper">
+      <div className="dashboard-container">
+        <HorasTotais history={history} />
+      </div>
+    </div>
   );
 }

@@ -86,10 +86,9 @@ body {
 
 }
 
-h1 {
+.list-title{
   font-size: 2rem;
-  font-weight: 900;
   text-align: center;
-  line-height: 40px;
+  text-transform: uppercase;
+  margin: 2%;
 }
-
