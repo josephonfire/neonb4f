@@ -1,4 +1,4 @@
-import '../../css/albumcard.css'
+import '../../css/albumCard.css'
 
 function AlbumCard(props) {
 

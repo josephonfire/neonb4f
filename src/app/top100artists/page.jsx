@@ -10,6 +10,7 @@ import { filterDate4Weeks, filterDate6Months, filter1Year } from '../hooks/filte
 
 //este é para que o nome do artista seja linkado à respetiva página de artista
 import { useRouter } from "next/navigation";
+import { Background } from "../components/Background";
 
 
 
@@ -31,6 +32,7 @@ export default function PageTop() {
   ];
 
   return (
+    <Background>
     <div>
       <div className={({ isActive }) => isActive ? "icon active" : "icon"}><NavBar /></div>
       <div><h1 className="list-title">Top 100 Artistas</h1></div>
@@ -68,5 +70,6 @@ export default function PageTop() {
         })}
       </div>
     </div>
+    </Background>
   );
 }

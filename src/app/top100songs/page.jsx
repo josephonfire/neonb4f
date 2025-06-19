@@ -1,4 +1,5 @@
 "use client"
+import { Background } from "../components/Background.jsx";
 import { useState } from "react";
 import MusicCard from '../components/MusicCard.jsx'
 import data from '../data/history.json'
@@ -25,6 +26,7 @@ export default function PageTop() {
   ];
 
   return (
+    <Background>
     <div>
       <div className={({ isActive }) => isActive ? "icon active" : "icon"}><NavBar /></div>
       <div><h1 className="list-title">Top 100 Músicas</h1></div>
@@ -63,5 +65,6 @@ export default function PageTop() {
         })}
       </div>
     </div>
+    </Background>
   );
 }
