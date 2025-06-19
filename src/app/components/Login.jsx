@@ -18,9 +18,7 @@ export function Login() {
               />
             </div>
             <h2 className="title">Spotidados</h2>
-            <p className="subtitle">
-              Elizabeth Farinha, Felipe Chinita e José Rodrigues
-            </p>
+
           </div>
 
           <div className="login-card">
@@ -52,7 +50,7 @@ export function Login() {
                     borderStartColor="#bb00ff"
                     borderEndColor="#bb00ff"
                     textColor="#fff"
-                    backgroundColor="#1f2933" 
+                    backgroundColor="#1f2933"
                     className="neon-login-button"
                   >
                     <span>Login</span>
@@ -87,11 +85,15 @@ export function Login() {
               </div>
 
               <p className="signup-text">
-                Não tens uma conta?
+                Não tem uma conta?
                 <a href="#"> Cadastre-se agora</a>
               </p>
             </div>
+
           </div>
+          <p className="subtitle">Desenvolvido por: <br></br>
+            Elisabete Farinha, Filipe Chinita e José Rodrigues
+          </p>
         </div>
       </div>
     </Background>

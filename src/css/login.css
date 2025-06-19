@@ -102,6 +102,9 @@ animation: gradientShift 10s ease infinite;
 
 .subtitle {
   color: #f9a8d4;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 1rem;
 }
 
 /* Cartão */
@@ -181,8 +184,9 @@ animation: gradientShift 10s ease infinite;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: #d1d5db;
+  gap: 0.5rem;
 }
 
 .remember input {
@@ -324,6 +328,7 @@ animation: gradientShift 10s ease infinite;
 
   .card-body {
     padding: 1rem;
+    border-radius: 1rem;
   }
 
   .form-group input {

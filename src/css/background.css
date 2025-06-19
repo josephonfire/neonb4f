@@ -16,7 +16,7 @@
 .neon-frame {
   border: 4px solid;
   border-image: linear-gradient(90deg, #ff3a82, #5233ff) 1;
-  animation: borderRotate 5s linear infinite;
+  animation: borderRotate 50ms linear infinite;
   border-radius: 1rem;
   
   box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), 0 0 30px rgba(138, 43, 226, 0.4),
