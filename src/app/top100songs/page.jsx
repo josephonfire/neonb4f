@@ -4,7 +4,6 @@ import data from '../data/history.json'
 import { useState } from "react";
 import { filterDate4Weeks, filterDate6Months, filter1Year} from '../hooks/filterDate.jsx'
 import NavBar from '../components/NavBar.jsx'; 
-
 import { useTopSongs } from '../hooks/hooks.jsx'
 
 export default function PageTop() {
@@ -25,6 +24,7 @@ export default function PageTop() {
   return (
     <div>
       <div className={({ isActive }) => isActive ? "icon active" : "icon"}><NavBar /></div>
+      <div><h1>Top 100 Songs</h1></div>
       <div>
         {/* Grid dos botões */}
       <div className="grid grid-cols-4 gap-4 justify-items-center mt-10 max-w-3xl mx-auto">
