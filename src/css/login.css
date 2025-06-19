@@ -113,7 +113,7 @@ animation: gradientShift 10s ease infinite;
 }
 
 .card-body {
-   background-color: #121212; /* preto menos intenso */
+   background-color: #301946;
   padding: 2rem;
   border-radius: 1rem;
   color: white;
