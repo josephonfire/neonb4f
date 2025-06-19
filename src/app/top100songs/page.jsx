@@ -27,7 +27,7 @@ export default function PageTop() {
   return (
     <div>
       <div className={({ isActive }) => isActive ? "icon active" : "icon"}><NavBar /></div>
-      <div><h1 className="list-title">Top 100 Songs</h1></div>
+      <div><h1 className="list-title">Top 100 Músicas</h1></div>
 
       <div>
         {/* Grid dos botões */}
