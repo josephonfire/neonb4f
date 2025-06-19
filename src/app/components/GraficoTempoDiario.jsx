@@ -51,7 +51,7 @@ export default function GraficoMediaMovel7Dias() {
         style={{
           textAlign: "center",
           marginBottom: "1rem",
-          color: "#d8b4fe",
+          color: "#000",
           fontWeight: "bold",
           textShadow: "0 0 5px #8b5cf6",
         }}
@@ -94,11 +94,11 @@ export default function GraficoMediaMovel7Dias() {
           <Line
             type="monotone"
             dataKey="mediaMovel"
-            stroke="#a78bfa"
+            stroke="#fff"
             strokeWidth={3}
             dot={false}
             name="Média móvel 7 dias"
-            activeDot={{ r: 6, stroke: "#7c3aed", strokeWidth: 2 }}
+            activeDot={{ r: 6, stroke: "#696969", strokeWidth: 2 }}
           />
         </LineChart>
       </ResponsiveContainer>

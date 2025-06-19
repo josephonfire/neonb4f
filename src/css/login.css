@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
 /* Layout principal */
 .login-wrapper {
 
@@ -407,5 +414,11 @@ animation: gradientShift 10s ease infinite;
   .social-btn {
     width: 36px;
     height: 36px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .login-container {
+    max-width: 600px;
   }
 }
