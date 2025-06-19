@@ -19,7 +19,7 @@ export function Login() {
             </div>
             <h2 className="title">Spotidados</h2>
             <p className="subtitle">
-              Elizabeth Farinha, Felipe Chinita e José Pedro
+              Elizabeth Farinha, Felipe Chinita e José Rodrigues
             </p>
           </div>
 
