@@ -28,7 +28,7 @@ function Navbar() {
                     {/* logo */}
                     <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
                         <li onClick={removeActive}>
-                            <a href='/dashboard' className={({ isActive }) => isActive ? "icon active" : "icon"} >
+                            <a href='/dashboard' className={`${styles.navLink}`} >
                                 <img src="/imgs/spoti-logo.svg" alt="Home-Logo" className="icon" /></a>
                         </li>
                         <li onClick={removeActive}>
