@@ -2,7 +2,9 @@
 import react, { useState } from 'react';
 import React from 'react';
 import styles from '../../css/NavBar.css';
-import { NavLink } from "react-router-dom";
+import { useRouter } from 'next/navigation';
+
+
 
 
 function Navbar() {
