@@ -1,26 +1,46 @@
-/* Estilo do fundo geral */
+
+
 .neon-background {
-  position: fixed;
+ 
   top: 0;
   left: 0;
+  min-height: 100dvh;
   width: 100vw;
-  height: 100vh;
-  background-color: #0d0d0d;
-  background-image: radial-gradient(circle at top left, #1a1a1a, #000);
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #0d0d0d;
+  background-image: radial-gradient(circle at top left, #1a1a1a, #000);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+
+
+
+
+  
 }
 
 .neon-frame {
-  width: 100vw;
-  height: 100vh;
-  padding: 0; /* teste sem padding */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* garantir que não fique fixo por cima */
-  z-index: 1; /* atrás */
+
+  border: 4px solid;
+  border-image: linear-gradient(90deg, #ff3a82, #5233ff) 1;
+  border-radius: 0;
+  background-color: rgba(15, 15, 25, 0.75);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4),
+              0 0 30px rgba(138, 43, 226, 0.4),
+              0 0 60px rgba(0, 240, 255, 0.2),
+              inset 0 0 15px rgba(0, 240, 255, 0.2);
 }
 
 .neon-login-button {
@@ -69,3 +89,4 @@
     font-size: 1.05rem;
   }
 }
+
