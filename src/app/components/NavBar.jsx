@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 function Navbar() {
     // adding the states 
-    const [isActive, setIsActive] = useState(0);
+    const [isActive, setIsActive] = useState(false);
     //add the active class
     const toggleActiveClass = () => {
         setIsActive(!isActive);
@@ -28,7 +28,7 @@ function Navbar() {
                     {/* logo */}
                     <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
                         <li onClick={removeActive}>
-                            <a href='/dashboard' className={({ isActive }) => isActive ? "icon active" : "icon"} >
+                            <a href='/dashboard' className={`${styles.navLink}`} >
                                 <img src="/imgs/spoti-logo.svg" alt="Home-Logo" className="icon" /></a>
                         </li>
                         <li onClick={removeActive}>
