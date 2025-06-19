@@ -87,6 +87,7 @@ animation: gradientShift 10s ease infinite;
 }
 
 .logo-img {
+  color: #301946;
   width: 7rem;
   height: 7rem;
   animation: pulseNeon 2s ease-in-out infinite;
@@ -113,7 +114,7 @@ animation: gradientShift 10s ease infinite;
 }
 
 .card-body {
-   background-color: #121212; /* preto menos intenso */
+   background-color: #301946;
   padding: 2rem;
   border-radius: 1rem;
   color: white;

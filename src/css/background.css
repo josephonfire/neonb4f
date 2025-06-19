@@ -18,6 +18,7 @@
   border-image: linear-gradient(90deg, #ff3a82, #5233ff) 1;
   animation: borderRotate 5s linear infinite;
   border-radius: 1rem;
+  
   box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), 0 0 30px rgba(138, 43, 226, 0.4),
     0 0 60px rgba(0, 240, 255, 0.2), inset 0 0 15px rgba(0, 240, 255, 0.2);
   background-color: rgba(15, 15, 25, 0.75);
@@ -27,6 +28,7 @@
   width: 100%;
   max-width: 700px;
   box-sizing: border-box;
+  
 }
 
 .neon-login-button {
@@ -48,4 +50,30 @@
   box-shadow:
     0 0 8px rgba(147, 51, 234, 0.5),
     0 0 15px rgba(200, 100, 255, 0.3);
+}
+
+/* Responsividade para telas pequenas (celulares) */
+@media (max-width: 480px) {
+  .neon-frame {
+    padding: 1rem;
+    max-width: 90vw; /* deixa um pouco de margem nas laterais */
+  }
+
+  .neon-login-button {
+    width: 70%; /* botão maior para toque fácil */
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
+
+/* Responsividade para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .neon-frame {
+    max-width: 500px;
+  }
+
+  .neon-login-button {
+    width: 60%;
+    font-size: 1.05rem;
+  }
 }

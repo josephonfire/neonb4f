@@ -4,6 +4,7 @@ import { useState } from "react";
 import AlbumCard from '../components/AlbumCard.jsx'
 import data from '../data/history.json'
 import NavBar from '../components/NavBar.jsx';
+import "../../css/dashboard-btn.css"
 
 import { useTopAlbums } from '../hooks/hooks.jsx'
 
@@ -27,11 +28,18 @@ export default function PageTop() {
     { label: "All Time" },
   ];
 
+  const albumList = 
+    active === 0 ? topAlbums4Weeks :
+    active === 1 ? topAlbums6Month :
+    active === 2 ? topAlbums1Year :
+    topAlbums;
+
   return (
     <div>
       <div className={({ isActive }) => isActive ? "icon active" : "icon"}><NavBar /></div>
       <div><h1 className="list-title">Top 100 Albums</h1></div>
 
+<<<<<<< HEAD
       <div>
         {/* Grid dos botões */}
         <div class="flex flex-direction-row gap-2
@@ -50,6 +58,34 @@ export default function PageTop() {
               {btn.label}
             </button>
           ))}
+=======
+        <div>
+          {/* Grid dos botões */}
+          <div className="dashboard-btn-container">
+        {buttons.map((btn, idx) => (
+          <button
+            key={btn.label}
+            onClick={() => setActive(idx)}
+            className={`dashboard-btn ${active === idx ? "active" : ""}`}
+          >
+            {btn.label}
+          </button>
+        ))}
+      </div>
+
+          {(active === 0 ? topAlbums4Weeks :
+            active === 1 ? topAlbums6Month :
+              active === 2 ? topAlbums1Year :
+                topAlbums
+          ).map((DataMap, index) => {
+            return (
+
+              <div key={DataMap.albumName}>
+                <AlbumCard position={index + 1} artistName={DataMap.artistName} albumName={DataMap.albumName} msTotal={DataMap.ms_total} />
+              </div>
+            )
+          })}
+>>>>>>> 8fbf9d8ca5668a96000fdaede48c7b4071d29989
         </div>
 
         {(active === 0 ? topAlbums4Weeks :

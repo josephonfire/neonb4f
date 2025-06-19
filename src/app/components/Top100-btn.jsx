@@ -2,20 +2,13 @@
 import { useState } from "react";
 import "../../css/dashboard-btn.css";
 
-export default function DashboardBtn() {
+export default function Top100btn({ buttons, onClick, renderContent }) {
   const [active, setActive] = useState(0);
 
-  const graficos = [
-    <GraficoTempoDiario key="tempo" />,
-    <GraficoHoras key="horas" />,
-    <GraficoSeason key="season" />
-  ];
-
-  const buttons = [
-    { label: "Average Time" },
-    { label: "Hours" },
-    { label: "Season" },
-  ];
+  function handleClick(idx) {
+    setActive(idx);
+    onClick && onClick(idx); // dispara função externa se enviada
+  }
 
   return (
     <div>
@@ -23,16 +16,19 @@ export default function DashboardBtn() {
         {buttons.map((btn, idx) => (
           <button
             key={btn.label}
-            onClick={() => setActive(idx)}
+            onClick={() => handleClick(idx)}
             className={`dashboard-btn ${active === idx ? "active" : ""}`}
           >
             {btn.label}
           </button>
         ))}
       </div>
-      <div className="dashboard-grafico-container">
-        {graficos[active]}
-      </div>
+
+      {renderContent && (
+        <div className="dashboard-grafico-container">
+          {renderContent(active)}
+        </div>
+      )}
     </div>
   );
 }
