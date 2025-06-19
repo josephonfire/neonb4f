@@ -1,5 +1,6 @@
 import '../../css/artistInfoBar.css'
 import { CgPlayButton } from "react-icons/cg";
+import data from '../data/history.json'
 /*componente para o perfil do artista*/
 function ArtistInfoBar(props) {
 
