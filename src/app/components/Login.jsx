@@ -7,7 +7,7 @@ import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa";
 export function Login() {
   return (
     <Background>
-        <div className="login-container">
+        <div className="login-background">
             <div className="login-header">
               <div className="logo-container">
                 <img
