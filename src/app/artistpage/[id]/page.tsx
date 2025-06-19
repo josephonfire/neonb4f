@@ -11,6 +11,7 @@ import { useTopArtists } from "../../hooks/hooks";
 import data from "../../data/history.json";
 import { Background } from "../../components/Background";
 import NavBar from '../../components/NavBar';
+import "../artistpage.css";
 
 export default function ArtistPage() {
     const params = useParams() as { id?: string };
@@ -24,7 +25,7 @@ export default function ArtistPage() {
     const artistIndex = topArtists.findIndex(
         (artist) => normalize(artist.artistName) === normalize(artistName)
     );
-    const position = artistIndex >= 0 ? artistIndex + 1 : '-'; 
+    const position = artistIndex >= 0 ? artistIndex + 1 : '-';
     const artistData = artistIndex >= 0 ? topArtists[artistIndex] : null; // tava dando 0 tive que colocar null pra dar 1
 
     return (
@@ -32,11 +33,14 @@ export default function ArtistPage() {
             <div>
                 <div><NavBar /></div>
                 <div>
-                    <div>
-                        <img className='artist-profile-photo' src="/imgs/spoti-singer-icon.svg" alt="artist profile photo" />
+                    <div className='pf-photo-div' >
+                        <img src="/imgs/spoti-singer-icon.svg" alt="artist profile photo" className='artist-profile-photo' />
                     </div>
-                    <h1 className='artist-name'>{artistName}</h1>
+
+                    <div className='arti-name-div'>
+                        <h1 className='artist-name'>{artistName}</h1></div>
                 </div>
+
                 <div className='artist-position'>
                     <p>TOP #{position}</p>
                 </div>
