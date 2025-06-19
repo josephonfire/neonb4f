@@ -25,6 +25,11 @@ export default function PageTop() {
   return (
     <div>
       <div><NavBar /></div>
+      
+        <div>
+        <h1>Top 100 Songs</h1>
+        <br />
+        </div>
       <div>
         {/* Grid dos botões */}
       <div className="grid grid-cols-4 gap-4 justify-items-center mt-10 max-w-3xl mx-auto">
@@ -32,7 +37,7 @@ export default function PageTop() {
           <button
             key={btn.label}
             onClick={() => setActive(idx)}
-            className={`w-full max-w-xs flex justify-center items-center rounded-4xl py-2 px-8 transition-all duration-300
+            className={`w-full h-10 max-w-xs flex justify-center items-center rounded-4xl py-2 px-8 transition-all duration-300
               ${
                 active === idx
                   ? "bg-white text-purple-700 shadow-lg shadow-pink-400/30 scale-105"
@@ -44,6 +49,7 @@ export default function PageTop() {
           </button>
         ))}
       </div>
+      <br />
         
         {(active === 0 ? topSongs4Weeks :
           active === 1 ? topSongs6Month :
