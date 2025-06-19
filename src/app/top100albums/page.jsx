@@ -8,6 +8,7 @@ import "../../css/dashboard-btn.css"
 import { Background } from "../components/Background";
 import { useTopAlbums } from '../hooks/hooks.jsx'
 
+
 import { filterDate4Weeks, filterDate6Months, filter1Year } from '../hooks/filterDate.jsx'
 
 
@@ -34,7 +35,12 @@ export default function PageTop() {
    
   return (
     <Background>
-    
+    <div>
+
+    <NavBar />
+
+</div>
+
     
       <div className={({ isActive }) => isActive ? "icon active" : "icon"}><NavBar /></div>
       <div><h1 className="list-title">Top 100 Albums</h1></div>
