@@ -38,6 +38,11 @@
 }
 
 /* === RESPONSIVIDADE === */
+@media (max-width: 600px) {
+  .dashboard-btn-container {
+    grid-template-columns: 1fr; /* 1 botão por linha */
+  }
+}
 
 @media (max-width: 768px) {
   .dashboard-btn-container {

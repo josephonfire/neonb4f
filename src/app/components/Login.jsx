@@ -32,7 +32,7 @@ export function Login() {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Bom dia flor"
+                    placeholder="Digite seu e-mail"
                   />
                 </div>
 
