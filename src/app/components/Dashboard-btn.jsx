@@ -9,15 +9,15 @@ export default function DashboardBtn() {
   const [active, setActive] = useState(0);
 
   const graficos = [
-    <GraficoMediaMovel7Dias key="tempo" />,
     <GraficoHoras key="horas" />,
+    <GraficoMediaMovel7Dias key="tempo" />,
     <GraficoSeasonPie key="season" />
   ];
 
   const buttons = [
-    { label: "Average Time" },
-    { label: "Hours" },
-    { label: "Season" },
+    { label: "Horas" },
+    { label: "Média" },
+    { label: "Estação" },
   ];
 
   return (

@@ -7,59 +7,26 @@
   padding: 0;
 }
 
-/* Layout principal centralizado com fundo animado */
 .dashboard-wrapper {
-  width: 100vw; /* usa 100% da largura da viewport */
   min-height: 100vh;
-  overflow-x: hidden; /* bloqueia overflow horizontal */
+  width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  box-sizing: border-box;
-
-  background: linear-gradient(270deg, #6b2ddf, #aa12d8, #9333ea);
-  background-size: 600% 600%;
-  animation: gradientShift 10s ease infinite;
-
-  box-shadow:
-    0 0 15px rgba(107, 45, 223, 0.4),
-    0 0 25px rgba(61, 6, 150, 0.3);
-}
-
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Container branco com borda neon */
-.dashboard-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centraliza horizontalmente */
-  justify-content: center;
+  align-items: flex-start;
+  background: #521f9050;
   padding: 0.5rem;
-  width: 90vw;
-  max-width: 1200px;
+  margin: 0;
   box-sizing: border-box;
-  backdrop-filter: blur(5px);
   border: 4px solid;
-  border-image: linear-gradient(135deg, #00f0ff, #8a2be2, #00f0ff) 1;
-  animation: borderRotate 5s linear infinite;
-  border-radius: 1rem;
-  box-shadow:
-    0 0 15px rgba(0, 240, 255, 0.4),
-    0 0 30px rgba(138, 43, 226, 0.4);
+  border-image: linear-gradient(90deg, #ff3a82, #5233ff) 1;
+  border-radius: 0;
+  background-color: rgba(15, 15, 25, 0.75);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4),
+              0 0 30px rgba(138, 43, 226, 0.4),
+              0 0 60px rgba(0, 240, 255, 0.2),
+              inset 0 0 15px rgba(0, 240, 255, 0.2);
 }
-
 
 @keyframes borderRotate {
   0% {
@@ -153,8 +120,11 @@
   }
 }
 
-@media (max-width: 640px) {
-  .dashboard-btn-container {
-    grid-template-columns: 1fr;
+@media (max-width: 600px) {
+  .dashboard-container {
+    width: 98vw;        /* Quase toda a largura no mobile */
+    max-width: 100vw;
+    margin: 0.5rem 0;
+    padding: 0;
   }
 }

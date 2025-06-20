@@ -35,7 +35,7 @@ function calcularMediaMovel(data, windowSize = 7) {
     const media = soma / windowSlice.length;
     mediasMoveis.push({
       data: data[i].data,
-      mediaMovel: parseFloat(media.toFixed(2)),
+      mediaMovel: Math.round(media.toFixed(2)),
     });
   }
   return mediasMoveis;
@@ -56,7 +56,7 @@ export default function GraficoMediaMovel7Dias() {
           textShadow: "0 0 5px #8b5cf6",
         }}
       >
-        Média móvel diária (7 dias) - minutos ouvindo música
+        Média semanal (7 dias) - minutos escutados
       </h2>
       <ResponsiveContainer width="100%" height={400}>
         <LineChart
@@ -97,7 +97,7 @@ export default function GraficoMediaMovel7Dias() {
             stroke="#fff"
             strokeWidth={3}
             dot={false}
-            name="Média móvel 7 dias"
+            name="Média 7 dias"
             activeDot={{ r: 6, stroke: "#000", strokeWidth: 2 }}
           />
         </LineChart>

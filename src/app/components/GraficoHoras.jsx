@@ -28,16 +28,16 @@ export default function GraficoHoras() {
 
   return (
     <div style={{ width: "100%", height: 400 }}>
-      <h2>Times of day</h2>
+      <h2>Horas por Dia</h2>
       <ResponsiveContainer width="100%" height={400}>
         <AreaChart
           data={minHorasProcessados}
-          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+          margin={{ top: 10, right: 30, left: 0, bottom: 15 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="hora" stroke="#fff"/>
           <YAxis stroke="#fff"/>
-          <Tooltip wrapperStyle={{ width: "50%", color: "#521f90"
+          <Tooltip wrapperStyle={{ width: "50%", color: "#521f90" 
           }} />
           <Area
             type="monotone"

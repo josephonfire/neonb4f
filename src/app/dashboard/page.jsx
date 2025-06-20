@@ -29,7 +29,7 @@ function HorasTotais({ history }) {
         </div>
       </div>
 
-      <div className="username">Nome do Usuário</div>
+      <div className="username">Utilizador</div>
 
       {/* Estatísticas */}
       <div className="stats-grid">
@@ -37,7 +37,7 @@ function HorasTotais({ history }) {
         <div className="stats-box">Faixas Ouvidas: {totalFaixas}</div>
         <div className="stats-box">
           Tempo de Reprodução: <br>
-          </br>{`${horas} h   ${minutos} min`}
+          </br>{`${horas} horas e ${minutos} minutos`}
         </div>
       </div>
 

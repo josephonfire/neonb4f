@@ -16,14 +16,15 @@
 }
 
 .dashboard-btn-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
   width: 100%;
-  max-width: 900px;
-  margin: 2.5rem auto 0 auto;
- justify-content: center;
- justify-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  overflow-x: auto;
 }
 
 .dashboard-btn:hover {
@@ -41,10 +42,17 @@
 /* === RESPONSIVIDADE === */
 @media (max-width: 600px) {
   .dashboard-btn-container {
-    grid-template-columns: 1fr; /* 1 botão por linha */
+    max-width: 98vw;
+    padding: 0.5rem 0.25rem;
+    gap: 0.25rem;
+  }
+  .dashboard-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.5rem;
+    min-width: 80px;
+    max-width: 100vw;
   }
 }
-
 @media (max-width: 768px) {
   .dashboard-btn-container {
     grid-template-columns: repeat(2, 1fr);
@@ -81,6 +89,9 @@
     align-items: flex-start;
   }
 }
+
+
+
 
 @media (max-width: 600px) {
   .dashboard-grafico-container {
