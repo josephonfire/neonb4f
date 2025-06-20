@@ -134,14 +134,14 @@
 /* Container gráfico */
 .dashboard-grafico-container {
   width: 100%;
-  max-width: 900px; /* mesmo valor do container de botões */
-  margin: 2rem auto 0 auto;
   min-height: 300px;
   background: #301946;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.25rem;
   box-sizing: border-box;
   overflow-y: hidden;
+  margin-top: 1rem;
+
 }
 
 

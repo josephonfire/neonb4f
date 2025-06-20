@@ -22,7 +22,8 @@
   width: 100%;
   max-width: 900px;
   margin: 2.5rem auto 0 auto;
-  padding: 0 1rem;
+ justify-content: center;
+ justify-items: center;
 }
 
 .dashboard-btn:hover {
