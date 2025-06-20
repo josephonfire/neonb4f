@@ -8,7 +8,7 @@ function ArtistInfoBar3(props) {
         <div className="infoBar1">
             <CgPlayButton className="ib-icon" />
             <div className="ib-text">
-                 <p>Tempo de Reprodução: prop</p>
+                 <p>Tempo de Reprodução: {props.artistData} minutos</p>
             </div>
         </div>
     )

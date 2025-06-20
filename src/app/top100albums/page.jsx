@@ -23,10 +23,10 @@ export default function PageTop() {
 
 
   const buttons = [
-    { label: "4 weeks" },
-    { label: "6 months" },
-    { label: "1 year" },
-    { label: "All Time" },
+    { label: "4 semanas" },
+    { label: "6 meses" },
+    { label: "1 ano" },
+    { label: "Desde sempre" },
   ];
 
   
@@ -40,7 +40,7 @@ export default function PageTop() {
 
       <NavBar />
 
-      <div><h1 className="list-title">Top 100 Albums</h1></div>
+      <div><h1 className="list-title">Top 100 Álbuns</h1></div>
 
       <div>
         {/* Grid dos botões */}

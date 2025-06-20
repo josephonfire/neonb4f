@@ -16,7 +16,7 @@ export function Login() {
                   className="logo-img"
                 />
               </div>
-              <h2 className="title">Spotidados</h2>
+              <h2 className="title">SPOTIDADOS</h2>
             </div>
 
             <div className="login-card">
@@ -28,7 +28,7 @@ export function Login() {
                       type="email"
                       id="email"
                       name="email"
-                      placeholder="Digite seu e-mail"
+                      placeholder="Digite o seu e-mail"
                     />
                   </div>
 
@@ -58,10 +58,11 @@ export function Login() {
                   <div className="remember-forgot">
                     <label className="remember">
                       <input type="checkbox" name="remember-me" />
-                      Lembrar minha password
+                      Lembrar a minha password
                     </label>
+                    
                     <a href="#" className="forgot-link">
-                      Esqueci minha password
+                      Esqueci a minha password
                     </a>
                   </div>
                 </form>
