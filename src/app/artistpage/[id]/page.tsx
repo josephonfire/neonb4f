@@ -10,7 +10,7 @@ import MusicCard from '../../components/MusicCard.jsx';
 import { useTopArtists } from "../../hooks/hooks";
 import data from "../../data/history.json";
 import { Background } from "../../components/Background";
-import NavBar from '../../components/NavBar';
+import NavBar_topartist from '../../components/NavBar_topartist.jsx';
 import "../artistpage.css";
 
 export default function ArtistPage() {
@@ -31,7 +31,7 @@ export default function ArtistPage() {
     return (
         <Background>
             <div>
-                <div><NavBar /></div>
+                <div><NavBar_topartist /></div>
                 <div>
                     <div className='pf-photo-div' >
                         <img src="/imgs/spoti-singer-icon.svg" alt="artist profile photo" className='artist-profile-photo' />

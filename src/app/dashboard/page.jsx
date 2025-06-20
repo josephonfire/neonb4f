@@ -29,7 +29,7 @@ function HorasTotais({ history }) {
         </div>
       </div>
 
-      <div className="username">Utilizador</div>
+      <div className="username">Zé Chinas</div>
 
       {/* Estatísticas */}
       <div className="stats-grid">

@@ -58,7 +58,13 @@ export default function GraficoSeasonPie() {
 
   return (
     <div style={{ width: "100%", height: 400 }}>
-      <h2>Tempo de música por estação do ano</h2>
+      <h2 style={{
+          textAlign: "center",
+          marginBottom: "1rem",
+          color: "#fff",
+          fontWeight: "bold",
+          textShadow: "0 0 5px #8b5cf6",
+        }}>Tempo de uso por estação</h2>
       <ResponsiveContainer width="100%" height={400} margin="10px">
         <PieChart>
           <Pie

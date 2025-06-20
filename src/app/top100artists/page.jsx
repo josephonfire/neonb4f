@@ -2,7 +2,8 @@
 import { useState } from "react";
 import Card from '../components/Card'
 import data from '../data/history.json'
-import NavBar from '../components/NavBar.jsx';
+import NavBar_topartist from '../components/NavBar_topartist.jsx';
+import "../../css/navbar.css"
 
 import { useTopArtists, useTopArtists2 } from '../hooks/hooks.jsx'
 
@@ -35,7 +36,7 @@ export default function PageTop() {
     <Background>
     <div>
 
-      <NavBar />
+      <NavBar_topartist />
 
       <div><h1 className="list-title">Top 100 Artistas</h1></div>
 
@@ -47,7 +48,7 @@ export default function PageTop() {
             <button
               key={btn.label}
               onClick={() => setActive(idx)}
-              className={`m-4 text-sm w-9/12 flex justify-center items-center rounded-4xl transition-all duration-300
+              className={`m-4 p-1 w-9/12 flex justify-center items-center rounded-2xl transition-all duration-300 text-sm
               ${active === idx
                   ? "bg-white text-purple-700 shadow-lg shadow-pink-400/30 scale-105"
                   : "bg-purple-700 text-white hover:bg-purple-600 hover:scale-105"

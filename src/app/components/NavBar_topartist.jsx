@@ -27,11 +27,11 @@ function Navbar() {
                 <nav className={`${styles.navbar}`}>
                     {/* logo */}
                     <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
-                        <li className="icon1" onClick={removeActive}>
+                        <li onClick={removeActive}>
                             <a href='/dashboard' className={`${styles.navLink}`} >
                                 <img src="/imgs/spoti-logo.svg" alt="Home-Logo" className="icon" /></a>
                         </li>
-                        <li onClick={removeActive}>
+                        <li className='icon1' onClick={removeActive}>
                             <a href='/top100artists' className={`${styles.navLink}`}>
                                 <img src="/imgs/spoti-singer-icon.svg" alt="artists" className="icon" /></a>
                         </li>

@@ -27,7 +27,7 @@ function Navbar() {
                 <nav className={`${styles.navbar}`}>
                     {/* logo */}
                     <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
-                        <li className="icon1" onClick={removeActive}>
+                        <li onClick={removeActive}>
                             <a href='/dashboard' className={`${styles.navLink}`} >
                                 <img src="/imgs/spoti-logo.svg" alt="Home-Logo" className="icon" /></a>
                         </li>
@@ -39,7 +39,7 @@ function Navbar() {
                             <a href='/top100songs' className={`${styles.navLink}`}>
                                 <img src="/imgs/spoti-musics-icon.svg" alt="musics" className="icon" /></a>
                         </li>
-                        <li onClick={removeActive}>
+                        <li className="icon1" onClick={removeActive}>
                             <a href='/top100albums' className={`${styles.navLink}`}>
                                 <img src="/imgs/spoti-albums-icon.svg" alt="albums" className="icon" /></a>
                         </li>

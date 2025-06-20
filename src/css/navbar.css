@@ -39,6 +39,8 @@ a {
     min-height: 40px;
 }
 
+
+
 .li {
     width: 100%;
     height: fit-content;
@@ -56,7 +58,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(0.75);
+    transform: scale(0.75)
 }
 
 .icon:active {
@@ -65,9 +67,13 @@ a {
     transform: scale(1);
 }
 
+.icon1 {
+    filter: drop-shadow(0 0 20px #521f90) drop-shadow(0 0 10px #bb1afb) drop-shadow(0 0 10px #bb1afb);
+    transform: scale(1);
+}
 
 
-.icon:focus {
+.icon:hover {
     filter: drop-shadow(0 0 20px #521f90) drop-shadow(0 0 10px #bb1afb) drop-shadow(0 0 10px #bb1afb);
     transform: scale(1);
 }

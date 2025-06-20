@@ -3,10 +3,11 @@ import "../globals.css"
 import { useState } from "react";
 import AlbumCard from '../components/AlbumCard.jsx'
 import data from '../data/history.json'
-import NavBar from '../components/NavBar.jsx';
+import NavBar_album from '../components/NavBar_album.jsx';
 import "../../css/dashboard-btn.css"
 import { Background } from "../components/Background";
 import { useTopAlbums } from '../hooks/hooks.jsx'
+import "../../css/navbar.css"
 
 
 import { filterDate4Weeks, filterDate6Months, filter1Year } from '../hooks/filterDate.jsx'
@@ -38,7 +39,7 @@ export default function PageTop() {
      <Background>
       <div>
 
-      <NavBar />
+      <NavBar_album />
 
       <div><h1 className="list-title">Top 100 Álbuns</h1></div>
 
@@ -50,7 +51,7 @@ export default function PageTop() {
             <button
               key={btn.label}
               onClick={() => setActive(idx)}
-              className={`m-4 text-sm w-9/12 flex justify-center items-center rounded-4xl transition-all duration-300
+              className={`m-4 p-1 w-9/12 flex justify-center items-center rounded-2xl transition-all duration-300 text-sm
               ${active === idx
                   ? "bg-white text-purple-700 shadow-lg shadow-pink-400/30 scale-100"
                   : "bg-purple-700 text-white hover:bg-purple-600 hover:scale-100"
