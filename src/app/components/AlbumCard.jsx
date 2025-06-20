@@ -12,8 +12,8 @@ function AlbumCard(props) {
             <div className="card-text">
                 <p>#{props.position}</p>
                 <h3>{props.albumName}</h3>
-                <h5>by {props.artistName}</h5>
-                <p>{Math.round((props.msTotal) / 60000)} minutes played</p></div>
+                <h5>de {props.artistName}</h5>
+                <p>{Math.round((props.msTotal) / 60000)} minutos ouvidos</p></div>
         </div>
     )
 }

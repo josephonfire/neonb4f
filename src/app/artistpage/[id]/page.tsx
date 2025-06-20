@@ -45,11 +45,7 @@ export default function ArtistPage() {
                     <p>TOP #{position}</p>
                 </div>
                 <div>
-                    {artistData ? (
-                        <p>by<br />{Math.round(artistData.ms_total / 60000)} minutes played</p>
-                    ) : (
-                        <p>Artista não encontrado</p>
-                    )}
+                   
                 </div>
                 <div className='charts'>
                     <PieChart />
@@ -58,7 +54,7 @@ export default function ArtistPage() {
                 <div className='artist-info-bar'>
                     <ArtistInfoBar />
                     <ArtistInfoBar2 />
-                    <ArtistInfoBar3 />
+                    <ArtistInfoBar3 artistData={Math.round(artistData.ms_total / 60000)}/>
                 </div>
                 <div className='cards'>
                     <h1 className='top-list'>TOP 20 Músicas</h1>
